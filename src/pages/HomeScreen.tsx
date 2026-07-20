@@ -11,6 +11,7 @@ interface HomeScreenProps {
   onCompete: () => void
   onStatistics: () => void
   onSettings: () => void
+  onBrowseCountries: () => void
 }
 
 const MODE_LABEL: Record<SessionState['config']['mode'], string> = {
@@ -27,6 +28,7 @@ export default function HomeScreen({
   onCompete,
   onStatistics,
   onSettings,
+  onBrowseCountries,
 }: HomeScreenProps) {
   return (
     <div className="relative flex min-h-dvh flex-col items-center justify-center gap-8 overflow-hidden px-6 py-12">
@@ -34,7 +36,7 @@ export default function HomeScreen({
 
       <div className="relative z-10 text-center">
         <div className="text-6xl">🌍</div>
-        <h1 className="mt-3 font-sans text-3xl font-bold text-ink">Flag Trainer</h1>
+        <h1 className="mt-3 font-sans text-3xl font-bold text-ink">Flaggy</h1>
       </div>
 
       {session && (
@@ -67,6 +69,9 @@ export default function HomeScreen({
         />
         <PillButton onClick={onStatistics} variant="secondary">
           Statistics
+        </PillButton>
+        <PillButton onClick={onBrowseCountries} variant="secondary">
+          Browse Countries
         </PillButton>
         <PillButton onClick={onSettings} variant="secondary">
           Settings

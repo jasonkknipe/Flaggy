@@ -15,9 +15,10 @@ import ResultsScreen from './pages/ResultsScreen'
 import StatisticsScreen from './pages/StatisticsScreen'
 import SettingsScreen from './pages/SettingsScreen'
 import AttemptStudySheetScreen from './pages/AttemptStudySheetScreen'
+import CountryBrowserScreen from './pages/CountryBrowserScreen'
 import type { CompeteAttempt, CompeteAttemptStatus } from './types/quiz'
 
-type View = 'home' | 'casualSelect' | 'modeOptions' | 'game' | 'results' | 'statistics' | 'settings' | 'attemptStudySheet'
+type View = 'home' | 'casualSelect' | 'modeOptions' | 'game' | 'results' | 'statistics' | 'settings' | 'attemptStudySheet' | 'countryBrowser'
 type PendingMode = Extract<GameMode, 'guess' | 'compete'>
 
 export default function App() {
@@ -107,6 +108,7 @@ export default function App() {
           }}
           onStatistics={() => setView('statistics')}
           onSettings={() => setView('settings')}
+          onBrowseCountries={() => setView('countryBrowser')}
         />
       )
 
@@ -180,6 +182,14 @@ export default function App() {
       return selectedAttempt ? (
         <AttemptStudySheetScreen attempt={selectedAttempt} byIso2={byIso2} onBack={() => setView('statistics')} />
       ) : null
+
+    case 'countryBrowser':
+      return (
+        <CountryBrowserScreen
+          countries={Array.from(byIso2.values())}
+          onBack={() => setView('home')}
+        />
+      )
 
     case 'settings':
       return (
