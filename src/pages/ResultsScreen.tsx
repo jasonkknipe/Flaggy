@@ -26,15 +26,6 @@ export default function ResultsScreen({ summary, byIso2, competeBestBeforeThisSe
     summary.mode === 'compete' &&
     (!competeBestBeforeThisSession || flagsCorrectThisSession > competeBestBeforeThisSession.flagsCorrect)
 
-  const rows = summary.history.map((record) => {
-    const country = byIso2.get(record.iso2)
-    const overallCorrect = Object.values(record.correct).every(Boolean)
-    const wrongFields = (Object.keys(record.correct) as GuessField[]).filter((field) => !record.correct[field])
-    return { record, country, overallCorrect, wrongFields }
-  })
-  const correctRows = rows.filter((row) => row.overallCorrect)
-  const incorrectRows = rows.filter((row) => !row.overallCorrect)
-
   return (
     <div className="mx-auto flex min-h-dvh max-w-2xl flex-col gap-8 px-6 py-10">
       <div className="text-center">
@@ -75,47 +66,7 @@ export default function ResultsScreen({ summary, byIso2, competeBestBeforeThisSe
       <div>
         <h2 className="mb-3 font-sans text-lg font-semibold text-ink">Study Sheet</h2>
 
-        {summary.mode === 'learning' ? (
-          <LearningStudySheet summary={summary} byIso2={byIso2} />
-        ) : (
-          <>
-            {incorrectRows.length > 0 && (
-              <div className="mb-4">
-                <p className="mb-2 font-sans text-sm font-medium text-danger">Incorrect ({incorrectRows.length})</p>
-                <ul className="space-y-2">
-                  {incorrectRows.map(({ record, country, wrongFields }) => (
-                    <li key={record.iso2 + record.answeredAtMs} className="rounded-2xl border border-border bg-surface-card p-3">
-                      <div className="font-sans text-sm font-semibold text-ink">
-                        {country?.name ?? record.iso2} - {country?.callingCode}
-                      </div>
-                      {wrongFields.map((field) => (
-                        <div key={field} className="font-sans text-xs text-ink-muted">
-                          {FIELD_LABEL[field]}: you wrote &ldquo;{record.guesses[field] || '(nothing)'}&rdquo;
-                          {field === 'capital' && country ? ` - correct: ${country.capitals.join(' / ')}` : ''}
-                          {field === 'country' && country ? ` - correct: ${country.name}` : ''}
-                          {field === 'callingCode' && country ? ` - correct: ${country.callingCode}` : ''}
-                        </div>
-                      ))}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {correctRows.length > 0 && (
-              <div>
-                <p className="mb-2 font-sans text-sm font-medium text-success">Correct ({correctRows.length})</p>
-                <ul className="grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-3">
-                  {correctRows.map(({ record, country }) => (
-                    <li key={record.iso2 + record.answeredAtMs} className="font-sans text-sm text-ink">
-                      {country?.name ?? record.iso2}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </>
-        )}
+        <LearningStudySheet summary={summary} byIso2={byIso2} />
       </div>
 
       <PillButton onClick={onHome}>Home</PillButton>

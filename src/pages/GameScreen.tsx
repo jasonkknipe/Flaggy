@@ -48,6 +48,7 @@ export default function GameScreen({
   const [fieldResults, setFieldResults] = useState<Partial<Record<GuessField, boolean>>>({})
   const [isAnswerInputFocused, setIsAnswerInputFocused] = useState(false)
   const [viewportHeight, setViewportHeight] = useState<number>()
+  const [isKeyboardOpen, setIsKeyboardOpen] = useState(false)
 
   const currentIso2 = currentCountryIso2(session)
   const currentCountry = currentIso2 ? byIso2.get(currentIso2) : undefined
@@ -63,7 +64,13 @@ export default function GameScreen({
     const viewport = window.visualViewport
     if (!viewport) return
 
-    const updateViewportHeight = () => setViewportHeight(Math.round(viewport.height))
+    const updateViewportHeight = () => {
+      setViewportHeight(Math.round(viewport.height))
+      // Only use the compact presentation when a mobile keyboard has
+      // genuinely reduced the visual viewport. Desktop focus/clicks retain
+      // the original full-size flag layout.
+      setIsKeyboardOpen(viewport.height < window.innerHeight - 120)
+    }
     updateViewportHeight()
     viewport.addEventListener('resize', updateViewportHeight)
     viewport.addEventListener('scroll', updateViewportHeight)
@@ -88,6 +95,7 @@ export default function GameScreen({
 
   function handleAskSubmit(field: GuessField, value: string) {
     if (!currentCountry) return
+    setIsAnswerInputFocused(false)
     const correct = validateGuess(field, value, currentCountry)
     const nextGuesses = { ...guesses, [field]: value }
     const nextResults = { ...fieldResults, [field]: correct }
@@ -157,10 +165,10 @@ export default function GameScreen({
       </GlassBar>
 
       <div className={`flex min-h-0 flex-1 flex-col items-center overflow-y-auto px-6 ${isAnswerInputFocused ? 'gap-1 py-2' : 'gap-3 py-4'}`}>
-        <FlagDisplay country={currentCountry} compact={isAnswerInputFocused} />
+        <FlagDisplay country={currentCountry} compact={isAnswerInputFocused && isKeyboardOpen} />
 
         {step.kind === 'ask' && (
-          <div className="flex w-full flex-col items-center gap-2">
+          <div className="flex w-full flex-col items-center gap-3">
             <p className="font-sans text-base font-medium text-ink">{FIELD_LABEL[step.field]}</p>
             {step.field === 'callingCode' ? (
               <CallingCodeInput

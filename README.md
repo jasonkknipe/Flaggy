@@ -28,8 +28,8 @@ Country data (name, calling code, capitals, currency, languages, continent) come
 
 **This script needs real network access to run**, and hasn't been executed end to end - the sandbox that built this has none, so it's written directly against mledoze's documented schema rather than tested against live output. Run it once, read the console warnings it prints (entry count, any of the five extra territories it can't find, unfilled population), and fix anything it flags. In particular:
 
-- **Population isn't in mledoze/countries at all.** The script leaves it at `0` with a `POPULATION_OVERRIDES` map at the top for you to fill in. Info-card-only, never scored.
-- **Kosovo has no official ISO 3166-1 code.** The script looks for the unofficial `XKX`/`XK` code several datasets use as a de facto standard; if this dataset doesn't carry it, add that entry by hand.
+- **Population comes from the UN World Population Prospects 2024 bulk CSV.** The generator uses its fixed 2024 mid-year estimates, so no API key is required. Values will intentionally remain on that revision until we choose to update the source URL/year.
+- **Kosovo has no official ISO 3166-1 code.** The generator reconciles mledoze's `UNK`/`XK` entry with the UN WPP CSV's `XKX`/`XK` entry.
 
 ## Local development in VS Code
 

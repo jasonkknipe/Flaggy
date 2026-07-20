@@ -22,8 +22,8 @@ export type GameStep =
 export function buildGameSteps(mode: GameMode, fieldPlan: FieldPlan): GameStep[] {
   const askedFields: GuessField[] = [
     'country',
-    ...(fieldPlan.callingCode ? (['callingCode'] as const) : []),
     ...(fieldPlan.capital ? (['capital'] as const) : []),
+    ...(fieldPlan.callingCode ? (['callingCode'] as const) : []),
   ]
 
   if (mode === 'learning') {

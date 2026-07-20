@@ -112,7 +112,5 @@ function FactRow({
 
 function formatPopulation(value: number): string {
   if (value <= 0) return 'Unknown'
-  if (value >= 1_000_000) return `${(value / 1_000_000).toFixed(1)} million`
-  if (value >= 1_000) return `${(value / 1_000).toFixed(0)} thousand`
-  return value.toString()
+  return Math.round(value).toLocaleString('en-US')
 }
