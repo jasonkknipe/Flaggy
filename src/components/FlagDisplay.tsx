@@ -4,6 +4,7 @@ import { flagSvgPath } from '../engine/flagAsset'
 
 interface FlagDisplayProps {
   country: Country
+  compact?: boolean
 }
 
 /** ~40% of viewport height per spec. Flags come from public/flags/4x3 (see
@@ -20,12 +21,16 @@ interface FlagDisplayProps {
  *  picture itself undistorted. object-contain stays as a defensive fallback
  *  for the rare non-4:3 source (Nepal, Switzerland, Vatican City), which
  *  would otherwise letterbox inside a now-guaranteed-correct 4:3 box. */
-export default function FlagDisplay({ country }: FlagDisplayProps) {
+export default function FlagDisplay({ country, compact = false }: FlagDisplayProps) {
   const src = flagSvgPath(country.iso2)
 
   return (
     <div className="flex w-full items-center justify-center">
-      <div className="aspect-[4/3] h-[30vh] max-h-72 min-h-40 max-w-full overflow-hidden rounded-lg shadow-lg">
+      <div
+        className={`aspect-[4/3] max-w-full overflow-hidden rounded-lg shadow-lg ${
+          compact ? 'h-[18dvh] max-h-36 min-h-24' : 'h-[30vh] max-h-72 min-h-40'
+        }`}
+      >
         <motion.img
           key={country.iso2}
           src={src}

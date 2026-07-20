@@ -9,9 +9,19 @@ interface AutocompleteInputProps {
   onSubmit: (value: string) => void
   placeholder?: string
   autoFocus?: boolean
+  onFocus?: () => void
+  onBlur?: () => void
 }
 
-export default function AutocompleteInput({ label, options, onSubmit, placeholder, autoFocus }: AutocompleteInputProps) {
+export default function AutocompleteInput({
+  label,
+  options,
+  onSubmit,
+  placeholder,
+  autoFocus,
+  onFocus,
+  onBlur,
+}: AutocompleteInputProps) {
   const [value, setValue] = useState('')
   const [highlighted, setHighlighted] = useState(-1)
   const [isOpen, setIsOpen] = useState(false)
@@ -28,8 +38,17 @@ export default function AutocompleteInput({ label, options, onSubmit, placeholde
   }
 
   function submit() {
-    if (!value.trim()) return
-    onSubmit(value)
+    const firstSuggestion = suggestions[0]
+    // Text answers are selected from the known country/capital list rather
+    // than submitted verbatim. This makes a partial answer such as "Can"
+    // select "Canada", while arbitrary free text cannot be graded.
+    if (!value.trim()) {
+      onSubmit('')
+    } else if (firstSuggestion) {
+      onSubmit(firstSuggestion)
+    } else {
+      return
+    }
     setValue('')
     setIsOpen(false)
     setHighlighted(-1)
@@ -75,7 +94,11 @@ export default function AutocompleteInput({ label, options, onSubmit, placeholde
           aria-controls={listId}
           aria-autocomplete="list"
           aria-activedescendant={highlighted >= 0 ? `${listId}-option-${highlighted}` : undefined}
+          name="flag-quiz-answer"
           autoComplete="off"
+          autoCapitalize="words"
+          autoCorrect="off"
+          spellCheck={false}
           autoFocus={autoFocus}
           value={value}
           placeholder={placeholder}
@@ -85,7 +108,11 @@ export default function AutocompleteInput({ label, options, onSubmit, placeholde
             setHighlighted(-1)
           }}
           onKeyDown={handleKeyDown}
-          onBlur={() => window.setTimeout(() => setIsOpen(false), 120)}
+          onFocus={onFocus}
+          onBlur={() => {
+            window.setTimeout(() => setIsOpen(false), 120)
+            onBlur?.()
+          }}
           className="min-h-11 w-full rounded-2xl border border-border bg-surface-card px-4 py-2.5 font-sans text-lg text-ink shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
         />
         {isOpen && suggestions.length > 0 && (
@@ -114,7 +141,7 @@ export default function AutocompleteInput({ label, options, onSubmit, placeholde
           </ul>
         )}
       </div>
-      <PillButton onClick={submit} className="mt-2 w-full" disabled={!value.trim()}>
+      <PillButton onClick={submit} className="mt-2 w-full" disabled={!suggestions.length}>
         Check answer
       </PillButton>
     </div>

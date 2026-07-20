@@ -46,6 +46,8 @@ export default function GameScreen({
   const [stepIndex, setStepIndex] = useState(0)
   const [guesses, setGuesses] = useState<Partial<Record<GuessField, string>>>({})
   const [fieldResults, setFieldResults] = useState<Partial<Record<GuessField, boolean>>>({})
+  const [isAnswerInputFocused, setIsAnswerInputFocused] = useState(false)
+  const [viewportHeight, setViewportHeight] = useState<number>()
 
   const currentIso2 = currentCountryIso2(session)
   const currentCountry = currentIso2 ? byIso2.get(currentIso2) : undefined
@@ -53,6 +55,23 @@ export default function GameScreen({
   const step = currentCountry ? steps[stepIndex] : undefined
   const isFixedLength = session.config.mode !== 'learning'
   const totalQuestions = isFixedLength ? session.queue.length : undefined
+
+  // iOS can leave the layout viewport at full height while the visual
+  // viewport shrinks for its keyboard. Use the latter so the quiz remains a
+  // contained screen instead of scrolling the flag out of view.
+  useEffect(() => {
+    const viewport = window.visualViewport
+    if (!viewport) return
+
+    const updateViewportHeight = () => setViewportHeight(Math.round(viewport.height))
+    updateViewportHeight()
+    viewport.addEventListener('resize', updateViewportHeight)
+    viewport.addEventListener('scroll', updateViewportHeight)
+    return () => {
+      viewport.removeEventListener('resize', updateViewportHeight)
+      viewport.removeEventListener('scroll', updateViewportHeight)
+    }
+  }, [])
 
   function finishQuestion(finalGuesses: Partial<Record<GuessField, string>>) {
     if (!currentCountry) return
@@ -119,7 +138,7 @@ export default function GameScreen({
   }
 
   return (
-    <div className="flex min-h-dvh flex-col">
+    <div className="flex h-dvh min-h-0 flex-col overflow-hidden" style={viewportHeight ? { height: viewportHeight } : undefined}>
       <GlassBar>
         <div className="flex items-center justify-between px-4 py-2">
           <button
@@ -137,20 +156,27 @@ export default function GameScreen({
         <ScoreboardBar session={session} />
       </GlassBar>
 
-      <div className="flex flex-1 flex-col items-center gap-3 overflow-y-auto px-6 py-4">
-        <FlagDisplay country={currentCountry} />
+      <div className={`flex min-h-0 flex-1 flex-col items-center overflow-y-auto px-6 ${isAnswerInputFocused ? 'gap-1 py-2' : 'gap-3 py-4'}`}>
+        <FlagDisplay country={currentCountry} compact={isAnswerInputFocused} />
 
         {step.kind === 'ask' && (
           <div className="flex w-full flex-col items-center gap-2">
             <p className="font-sans text-base font-medium text-ink">{FIELD_LABEL[step.field]}</p>
             {step.field === 'callingCode' ? (
-              <CallingCodeInput autoFocus onSubmit={(value) => handleAskSubmit('callingCode', value)} />
+              <CallingCodeInput
+                autoFocus
+                onSubmit={(value) => handleAskSubmit('callingCode', value)}
+                onFocus={() => setIsAnswerInputFocused(true)}
+                onBlur={() => setIsAnswerInputFocused(false)}
+              />
             ) : (
               <AutocompleteInput
                 label={step.field === 'country' ? 'Country' : 'Capital'}
                 options={step.field === 'country' ? allNames : allCapitals}
                 autoFocus
                 onSubmit={(value) => handleAskSubmit(step.field, value)}
+                onFocus={() => setIsAnswerInputFocused(true)}
+                onBlur={() => setIsAnswerInputFocused(false)}
               />
             )}
             <PillButton variant="ghost" onClick={() => handleAskSubmit(step.field, '')}>

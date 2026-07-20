@@ -5,15 +5,16 @@ import PillButton from './PillButton'
 interface CallingCodeInputProps {
   onSubmit: (value: string) => void
   autoFocus?: boolean
+  onFocus?: () => void
+  onBlur?: () => void
 }
 
-export default function CallingCodeInput({ onSubmit, autoFocus }: CallingCodeInputProps) {
+export default function CallingCodeInput({ onSubmit, autoFocus, onFocus, onBlur }: CallingCodeInputProps) {
   const [digits, setDigits] = useState('')
   const inputId = useId()
 
   function submit() {
-    if (!digits) return
-    onSubmit(`+${digits}`)
+    onSubmit(digits ? `+${digits}` : '')
     setDigits('')
   }
 
@@ -41,11 +42,14 @@ export default function CallingCodeInput({ onSubmit, autoFocus }: CallingCodeInp
           type="text"
           inputMode="numeric"
           autoComplete="off"
+          name="flag-quiz-calling-code"
           autoFocus={autoFocus}
           aria-label="Calling code, digits only"
           value={digits}
           onChange={(event) => setDigits(event.target.value.replace(/\D/g, ''))}
           onKeyDown={handleKeyDown}
+          onFocus={onFocus}
+          onBlur={onBlur}
           className="w-full bg-transparent font-sans text-lg tabular-nums text-ink outline-none"
         />
       </div>
