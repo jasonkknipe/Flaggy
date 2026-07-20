@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import type { Country } from '../types/country'
-import { flagSvgPath } from '../engine/flagAsset'
+import FlagImage from '../components/FlagImage'
 import GlassBar from '../components/GlassBar'
 import PillButton from '../components/PillButton'
 
@@ -98,14 +98,7 @@ function CountryCard({ country, index }: { country: Country; index: number }) {
       transition={{ duration: 0.2, delay: Math.min(index * 0.015, 0.4) }}
       className="rounded-2xl border border-border bg-surface-card p-3 shadow-sm"
     >
-      <div className="aspect-[4/3] overflow-hidden rounded-lg">
-        <img
-          src={flagSvgPath(country.iso2)}
-          alt={`Flag of ${country.name}`}
-          className="h-full w-full object-contain"
-          loading="lazy"
-        />
-      </div>
+      <FlagImage iso2={country.iso2} name={country.name} className="rounded-lg" />
       <div className="mt-2.5">
         <p className="font-sans text-sm font-semibold text-ink leading-tight line-clamp-1">{country.name}</p>
         <p className="mt-0.5 font-sans text-xs text-ink-muted leading-tight line-clamp-1">

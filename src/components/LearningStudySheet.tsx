@@ -1,7 +1,7 @@
 import type { Country } from '../types/country'
 import type { GuessField, QuestionRecord, SessionSummary } from '../types/quiz'
-import { flagSvgPath } from '../engine/flagAsset'
 import { CheckIcon, CrossIcon } from './StatusIcons'
+import FlagImage from './FlagImage'
 
 interface LearningStudySheetProps {
   summary: SessionSummary
@@ -42,7 +42,7 @@ function FlagCard({ country, record }: { country: Country; record: QuestionRecor
   return (
     <div className={`rounded-2xl border-2 p-3 ${borderClass(graded, correct)}`}>
       <CardHeading label="Flag" graded={graded} correct={correct} />
-      <img src={flagSvgPath(country.iso2)} alt={`Flag of ${country.name}`} className="mt-2 aspect-[4/3] w-full rounded-lg object-contain" />
+      <FlagImage iso2={country.iso2} name={country.name} className="mt-2 w-full rounded-lg" />
       <p className="mt-2 truncate font-sans text-sm font-semibold text-ink">{country.name}</p>
       {graded && !correct && <GuessText value={record.guesses.country} />}
     </div>
