@@ -33,7 +33,7 @@ export function buildGameSteps(mode: GameMode, fieldPlan: FieldPlan): GameStep[]
     ]
   }
 
-  if (mode === 'guess' || mode === 'compete') {
+  else {
     const steps: GameStep[] = []
     for (const field of askedFields) {
       steps.push({ kind: 'ask', field })
