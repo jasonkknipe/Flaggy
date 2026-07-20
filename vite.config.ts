@@ -10,7 +10,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 const BASE_PATH = '/flag-trainer/'
 
 export default defineConfig({
-  base: BASE_PATH,
+  base: '/Flaggy/',
   plugins: [
     react(),
     tailwindcss(),
