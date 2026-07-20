@@ -10,7 +10,7 @@ export function useStats() {
 
   /** Call once per answered question. Learning Mode sessions can run
    *  indefinitely, so stats are kept live rather than only written at the
-   *  end of a session — the same reasoning as persisting SessionState after
+   *  end of a session - the same reasoning as persisting SessionState after
    *  every answer, not just on exit. */
   const recordQuestion = useCallback(
     (record: QuestionRecord) => {
@@ -25,7 +25,7 @@ export function useStats() {
           }
         }
 
-        // Streak is scoped to the country guess specifically — the one
+        // Streak is scoped to the country guess specifically - the one
         // guess that happens in every mode, so it's the only fair constant.
         const countryCorrect = record.correct.country ?? false
         if (countryCorrect) {
@@ -49,7 +49,7 @@ export function useStats() {
   )
 
   /** Call once when a session ends (Exit, or reaching the end of a fixed-
-   *  length run). Only touches gamesPlayed and the Compete personal best —
+   *  length run). Only touches gamesPlayed and the Compete personal best -
    *  per-question numbers are already live via recordQuestion. */
   const recordSessionEnd = useCallback(
     (mode: GameMode, summary: SessionSummary) => {

@@ -12,16 +12,16 @@ import type {
 import { validateGuess } from './answerValidation'
 import { createLearningQueue, extendQueueIfRunningLow, reinsertAfterMiss } from './spacedRepetition'
 
-/** Learning Mode always reveals calling code + capital — it never adds a
+/** Learning Mode always reveals calling code + capital - it never adds a
  *  second or third guess to the one mode built around low cognitive load and
  *  spaced repetition on a single skill. In Guess/Compete, both calling code
- *  and capital are independent per-session choices — reveal-only or guess. */
+ *  and capital are independent per-session choices - reveal-only or guess. */
 export function resolveFieldPlan(mode: GameMode, callingCodeGuessingChosen: boolean, capitalGuessingChosen: boolean): FieldPlan {
   if (mode === 'learning') return { callingCode: false, capital: false }
   return { callingCode: callingCodeGuessingChosen, capital: capitalGuessingChosen }
 }
 
-/** Compete ignores `length` entirely and is always every country once — per
+/** Compete ignores `length` entirely and is always every country once - per
  *  your "compete against your own record across the whole list" framing, a
  *  shorter Compete run wouldn't be comparable to a personal best. The 20/50/
  *  100 options are a Guess Mode thing. */
@@ -64,14 +64,14 @@ interface SubmitAnswerArgs {
   state: SessionState
   country: Country
   guesses: Partial<Record<GuessField, string>>
-  /** The full playable list — only needed for Learning Mode's queue top-up,
+  /** The full playable list - only needed for Learning Mode's queue top-up,
    *  ignored for Guess/Compete. Pass it through anyway; it's cheap. */
   allIso2: string[]
 }
 
 /** Applies one answered question: validates every field that was actually
  *  asked (per the session's FieldPlan), records the result, and advances the
- *  queue — re-inserting misses and topping up for Learning Mode. Pure
+ *  queue - re-inserting misses and topping up for Learning Mode. Pure
  *  function; the caller owns persistence (localStorage, etc). */
 export function submitAnswer({ state, country, guesses, allIso2 }: SubmitAnswerArgs): SessionState {
   const fieldsAsked: GuessField[] = [
@@ -114,7 +114,7 @@ export function submitAnswer({ state, country, guesses, allIso2 }: SubmitAnswerA
   }
 }
 
-/** Learning Mode never completes on its own — it ends only when the user
+/** Learning Mode never completes on its own - it ends only when the user
  *  presses Exit (handled by calling summarize() directly, not by this). */
 export function isSessionComplete(state: SessionState): boolean {
   if (state.config.mode === 'learning') return false

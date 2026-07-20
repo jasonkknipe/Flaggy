@@ -86,14 +86,14 @@ export default function ResultsScreen({ summary, byIso2, competeBestBeforeThisSe
                   {incorrectRows.map(({ record, country, wrongFields }) => (
                     <li key={record.iso2 + record.answeredAtMs} className="rounded-2xl border border-border bg-surface-card p-3">
                       <div className="font-sans text-sm font-semibold text-ink">
-                        {country?.name ?? record.iso2} — {country?.callingCode}
+                        {country?.name ?? record.iso2} - {country?.callingCode}
                       </div>
                       {wrongFields.map((field) => (
                         <div key={field} className="font-sans text-xs text-ink-muted">
                           {FIELD_LABEL[field]}: you wrote &ldquo;{record.guesses[field] || '(nothing)'}&rdquo;
-                          {field === 'capital' && country ? ` — correct: ${country.capitals.join(' / ')}` : ''}
-                          {field === 'country' && country ? ` — correct: ${country.name}` : ''}
-                          {field === 'callingCode' && country ? ` — correct: ${country.callingCode}` : ''}
+                          {field === 'capital' && country ? ` - correct: ${country.capitals.join(' / ')}` : ''}
+                          {field === 'country' && country ? ` - correct: ${country.name}` : ''}
+                          {field === 'callingCode' && country ? ` - correct: ${country.callingCode}` : ''}
                         </div>
                       ))}
                     </li>

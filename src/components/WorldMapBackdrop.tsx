@@ -1,5 +1,5 @@
 /** Abstract latitude/longitude graticule, very low opacity, purely
- *  decorative. Deliberately not a literal world-map illustration — that
+ *  decorative. Deliberately not a literal world-map illustration - that
  *  would mean embedding a large, detailed path (weight + attribution
  *  questions) for something meant to sit at ~5% opacity behind the logo. */
 export default function WorldMapBackdrop() {

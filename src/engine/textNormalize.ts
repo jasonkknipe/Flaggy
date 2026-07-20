@@ -1,7 +1,7 @@
 /**
  * Normalizes free-text answers for comparison: case-insensitive,
  * accent-insensitive, whitespace-collapsed. Per your call, this is the ONLY
- * leniency in matching — there's no alias/synonym table. "United States" and
+ * leniency in matching - there's no alias/synonym table. "United States" and
  * "united   states" match each other; "USA" does not match "United States"
  * unless "USA" is itself the stored canonical name for that country.
  */

@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 /**
- * Fetches mledoze/countries (ODbL license — credit it if you redistribute
+ * Fetches mledoze/countries (ODbL license - credit it if you redistribute
  * the resulting data file, see README) and writes src/data/countries.json in
  * this app's schema, curated down to your specific 198 entries.
  *
- * Needs real network access — run this on your machine or in CI (the
+ * Needs real network access - run this on your machine or in CI (the
  * deploy workflow already calls it before building). It was NOT run inside
  * the sandbox that built the rest of this project, since that environment
  * has no network access; the schema below is built from the live
@@ -24,19 +24,19 @@ const OUTPUT_PATH = path.join(path.dirname(fileURLToPath(import.meta.url)), '../
 
 // Your 198 = 193 UN members + these five, which aren't UN members so the
 // independent+unMember filter below won't pick them up on its own:
-//   VAT  Holy See / Vatican City — independent, but a UN observer, not a member
-//   PSE  Palestine — UN observer, not a member
+//   VAT  Holy See / Vatican City - independent, but a UN observer, not a member
+//   PSE  Palestine - UN observer, not a member
 //   TWN  Taiwan
-//   XKX  Kosovo — has NO official ISO 3166-1 code; XKX/XK is the unofficial
+//   XKX  Kosovo - has NO official ISO 3166-1 code; XKX/XK is the unofficial
 //        code most datasets (this one, if present) use as a de facto standard.
-//        If it's missing from the source, you'll need to hand-add it — see
+//        If it's missing from the source, you'll need to hand-add it - see
 //        the warning this script prints below.
 //   ESH  Western Sahara
 const EXTRA_ISO3 = ['VAT', 'PSE', 'TWN', 'XKX', 'ESH']
 
 // mledoze/countries doesn't include population at all (confirmed against its
-// README's field list). Fill this in from a source of your choice — World
-// Bank, UN data, etc — before shipping. It's info-card-only, never used for
+// README's field list). Fill this in from a source of your choice - World
+// Bank, UN data, etc - before shipping. It's info-card-only, never used for
 // scoring, so it's low-stakes, but 0 will look broken if left unfilled.
 // Key by cca3 (alpha-3 ISO code).
 const POPULATION_OVERRIDES = {
@@ -49,7 +49,7 @@ function stripAccents(value) {
 }
 
 // Single canonical name per country: common English name, accents
-// normalized. No aliases — "USA" is never a second valid entry alongside
+// normalized. No aliases - "USA" is never a second valid entry alongside
 // "United States", so whichever form mledoze's name.common gives us for a
 // given country IS the one and only accepted spelling.
 function canonicalName(entry) {
@@ -101,14 +101,14 @@ async function main() {
   console.log(`Built ${countries.length} entries (expecting 198).`)
   if (countries.length !== 198) {
     console.warn(
-      `Got ${countries.length}, not 198 — check the unMember filter and the ` +
+      `Got ${countries.length}, not 198 - check the unMember filter and the ` +
         `EXTRA_ISO3 list by hand before shipping this data.`,
     )
   }
 
   const unpopulated = countries.filter((c) => c.population === 0).length
   if (unpopulated > 0) {
-    console.warn(`${unpopulated} countries have population 0 — fill in POPULATION_OVERRIDES above.`)
+    console.warn(`${unpopulated} countries have population 0 - fill in POPULATION_OVERRIDES above.`)
   }
 
   await writeFile(OUTPUT_PATH, JSON.stringify(countries, null, 2))
@@ -119,7 +119,7 @@ main().catch((err) => {
   if (err?.cause?.code === 'UNABLE_TO_GET_ISSUER_CERT_LOCALLY' || err?.cause?.code === 'DEPTH_ZERO_SELF_SIGNED_CERT') {
     console.error(
       `\nCould not verify the HTTPS certificate for ${SOURCE_URL}.\n` +
-        `This usually means you're on a network that inspects HTTPS traffic (common on managed/work laptops) —\n` +
+        `This usually means you're on a network that inspects HTTPS traffic (common on managed/work laptops) -\n` +
         `Windows and your browser already trust that certificate, Node doesn't check the Windows certificate\n` +
         `store by default. Export your network's root certificate (certmgr.msc > Trusted Root Certification\n` +
         `Authorities > Certificates > Export as Base-64 X.509 .cer), then:\n` +

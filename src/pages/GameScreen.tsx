@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { Country } from '../types/country'
-import type { GuessField, SessionState } from '../types/quiz'
+import type { CompeteAttemptStatus, GuessField, SessionState } from '../types/quiz'
 import { buildGameSteps } from '../engine/gameSteps'
 import { currentCountryIso2, isSessionComplete, submitAnswer } from '../engine/sessionEngine'
 import { validateGuess } from '../engine/answerValidation'
@@ -19,7 +19,7 @@ interface GameScreenProps {
   allNames: string[]
   allCapitals: string[]
   onSessionChange: (updated: SessionState) => void
-  onSessionEnd: (finalState: SessionState) => void
+  onSessionEnd: (finalState: SessionState, status?: CompeteAttemptStatus) => void
   recordQuestion: (record: SessionState['history'][number]) => void
 }
 
@@ -112,7 +112,7 @@ export default function GameScreen({
   }
 
   function handleExit() {
-    onSessionEnd(session)
+    onSessionEnd(session, 'exited')
   }
 
   // Enter advances only when a reveal is already on screen. The answer inputs
@@ -132,8 +132,8 @@ export default function GameScreen({
   })
 
   if (!currentCountry || !step) {
-    // Shouldn't normally render — App transitions away as soon as the
-    // session completes — but guards against a data/session mismatch.
+    // Shouldn't normally render - App transitions away as soon as the
+    // session completes - but guards against a data/session mismatch.
     return null
   }
 
@@ -180,7 +180,7 @@ export default function GameScreen({
               />
             )}
             <PillButton variant="ghost" onClick={() => handleAskSubmit(step.field, '')}>
-              Not sure — skip
+              Skip
             </PillButton>
           </div>
         )}

@@ -7,15 +7,15 @@ export function validateGuess(field: GuessField, guess: string, country: Country
     case 'country':
       return answersMatch(guess, country.name)
     case 'capital':
-      // Any official capital counts — South Africa's three, Bolivia's two,
-      // etc. — same "shared answer is fine" logic as calling codes.
+      // Any official capital counts - South Africa's three, Bolivia's two,
+      // etc. - same "shared answer is fine" logic as calling codes.
       return country.capitals.some((capital) => answersMatch(guess, capital))
     case 'callingCode':
       return normalizeCallingCode(guess) === normalizeCallingCode(country.callingCode)
   }
 }
 
-/** Tolerates "+61", "61", " +61 " as equivalent — only the digits matter. */
+/** Tolerates "+61", "61", " +61 " as equivalent - only the digits matter. */
 function normalizeCallingCode(input: string): string {
   return input.replace(/\D/g, '')
 }

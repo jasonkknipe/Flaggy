@@ -6,7 +6,7 @@ import countriesData from '../data/countries.json'
  * Static import, not a runtime fetch: this is bundled at build time, which
  * is what makes "no external APIs during gameplay" and full offline support
  * possible. Until you've run `npm run generate-data`, countries.json is a
- * copy of the 10-country sample — see the README.
+ * copy of the 10-country sample - see the README.
  */
 export function useCountries() {
   const countries = countriesData as Country[]

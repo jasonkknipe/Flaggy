@@ -3,6 +3,7 @@ import { useCountries } from './hooks/useCountries'
 import { useSession } from './hooks/useSession'
 import { useStats } from './hooks/useStats'
 import { useSettings } from './hooks/useSettings'
+import { useAttemptLog } from './hooks/useAttemptLog'
 import { resolveFieldPlan, summarize } from './engine/sessionEngine'
 import type { GameMode, SessionLength, SessionState, SessionSummary } from './types/quiz'
 import type { PersonalBest } from './types/stats'
@@ -13,8 +14,10 @@ import GameScreen from './pages/GameScreen'
 import ResultsScreen from './pages/ResultsScreen'
 import StatisticsScreen from './pages/StatisticsScreen'
 import SettingsScreen from './pages/SettingsScreen'
+import AttemptStudySheetScreen from './pages/AttemptStudySheetScreen'
+import type { CompeteAttempt, CompeteAttemptStatus } from './types/quiz'
 
-type View = 'home' | 'casualSelect' | 'modeOptions' | 'game' | 'results' | 'statistics' | 'settings'
+type View = 'home' | 'casualSelect' | 'modeOptions' | 'game' | 'results' | 'statistics' | 'settings' | 'attemptStudySheet'
 type PendingMode = Extract<GameMode, 'guess' | 'compete'>
 
 export default function App() {
@@ -22,11 +25,13 @@ export default function App() {
   const [pendingMode, setPendingMode] = useState<PendingMode | null>(null)
   const [lastSummary, setLastSummary] = useState<SessionSummary | null>(null)
   const [competeBestSnapshot, setCompeteBestSnapshot] = useState<PersonalBest | null>(null)
+  const [selectedAttempt, setSelectedAttempt] = useState<CompeteAttempt | null>(null)
 
   const { byIso2, allNames, allCapitals, allIso2 } = useCountries()
   const { session, setSession, startSession, clearSession } = useSession()
   const { stats, recordQuestion, recordSessionEnd, resetStatistics, resetLearningHistory } = useStats()
   const { settings, setSettings } = useSettings()
+  const attemptLog = useAttemptLog()
 
   // Defensive: if a view's required state is missing (e.g. arrived here via
   // a stale reference), fall back to Home rather than render a dead end.
@@ -34,12 +39,23 @@ export default function App() {
     if (view === 'game' && !session) setView('home')
     if (view === 'modeOptions' && !pendingMode) setView('home')
     if (view === 'results' && !lastSummary) setView('home')
-  }, [view, session, pendingMode, lastSummary])
+    if (view === 'attemptStudySheet' && !selectedAttempt) setView('statistics')
+  }, [view, session, pendingMode, lastSummary, selectedAttempt])
 
-  function endSession(finalState: SessionState) {
+  function endSession(finalState: SessionState, status: CompeteAttemptStatus = 'completed') {
     const summary = summarize(finalState)
     setCompeteBestSnapshot(stats.lifetime.competeBest)
     recordSessionEnd(finalState.config.mode, summary)
+    if (finalState.config.mode === 'compete') {
+      attemptLog.recordAttempt({
+        id: finalState.id,
+        startedAt: finalState.startedAt,
+        endedAt: Date.now(),
+        status,
+        plannedQuestions: finalState.queue.length,
+        summary,
+      })
+    }
     clearSession()
     setLastSummary(summary)
     setView('results')
@@ -83,7 +99,7 @@ export default function App() {
         <HomeScreen
           session={session}
           onResumeSession={() => setView('game')}
-          onEndSession={() => session && endSession(session)}
+          onEndSession={() => session && endSession(session, 'exited')}
           onCasual={() => setView('casualSelect')}
           onCompete={() => {
             setPendingMode('compete')
@@ -145,7 +161,25 @@ export default function App() {
       ) : null
 
     case 'statistics':
-      return <StatisticsScreen stats={stats} byIso2={byIso2} onBack={() => setView('home')} />
+      return (
+        <StatisticsScreen
+          stats={stats}
+          byIso2={byIso2}
+          attempts={attemptLog.attempts}
+          isAttemptLogLoading={attemptLog.isLoading}
+          onRefreshAttempts={() => void attemptLog.refresh()}
+          onOpenAttempt={(attempt) => {
+            setSelectedAttempt(attempt)
+            setView('attemptStudySheet')
+          }}
+          onBack={() => setView('home')}
+        />
+      )
+
+    case 'attemptStudySheet':
+      return selectedAttempt ? (
+        <AttemptStudySheetScreen attempt={selectedAttempt} byIso2={byIso2} onBack={() => setView('statistics')} />
+      ) : null
 
     case 'settings':
       return (

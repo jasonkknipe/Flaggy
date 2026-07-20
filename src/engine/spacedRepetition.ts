@@ -2,7 +2,7 @@
  * Learning Mode's queue: an ordinary shuffled run through every country,
  * except a missed one is re-inserted later instead of moving on for good,
  * and the queue tops itself up before running out since Learning Mode has no
- * natural end — it only stops when you press Exit.
+ * natural end - it only stops when you press Exit.
  *
  * The re-insertion offset scales with how many repeats are already pending
  * in the upcoming queue. Missing one flag pushes it back ~10 questions; but
@@ -22,7 +22,7 @@ export function createLearningQueue(allIso2: string[]): string[] {
 }
 
 /** `previouslyAnsweredIso2` should be every country already answered this
- *  session (correct or not) — used only to count how many *pending* repeats
+ *  session (correct or not) - used only to count how many *pending* repeats
  *  already exist in the upcoming queue, not to affect which one gets
  *  reinserted right now. */
 export function reinsertAfterMiss(

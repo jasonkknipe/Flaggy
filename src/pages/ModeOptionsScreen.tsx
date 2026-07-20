@@ -94,7 +94,7 @@ export default function ModeOptionsScreen({
       )}
 
       {mode === 'compete' && (
-        <p className="font-sans text-sm text-ink-muted">Every country, once — {totalCountries} in total.</p>
+        <p className="font-sans text-sm text-ink-muted">Every country, once - {totalCountries} in total.</p>
       )}
 
       <ToggleRow label="Country calling codes" value={callingCodeGuessing} onChange={setCallingCodeGuessing} />

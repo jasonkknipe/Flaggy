@@ -14,12 +14,12 @@ export default function CasualSelectScreen({ onLearning, onGuess, onBack }: Casu
       <div className="flex w-full max-w-sm flex-col gap-3">
         <ModeOptionCard
           title="Learning Mode"
-          description="Flashcard-style, one skill at a time. Miss a flag and it comes back later for another try — no fixed end, study until you're done."
+          description="Flashcard-style, one skill at a time. Miss a flag and it comes back later for another try - no fixed end, study until you're done."
           onClick={onLearning}
         />
         <ModeOptionCard
           title="Guess Mode"
-          description="Pick how many countries. Guess the country, see the result, then guess the next thing — feedback after every step."
+          description="Pick how many countries. Guess the country, see the result, then guess the next thing - feedback after every step."
           onClick={onGuess}
         />
         <PillButton onClick={onBack} variant="ghost">

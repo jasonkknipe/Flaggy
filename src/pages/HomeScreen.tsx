@@ -41,7 +41,7 @@ export default function HomeScreen({
         <div className="relative z-10 w-full max-w-sm rounded-3xl border border-border bg-surface-card p-5 shadow-lg">
           <p className="font-sans text-sm text-ink-muted">Unfinished round</p>
           <p className="font-sans text-lg font-semibold text-ink">
-            {MODE_LABEL[session.config.mode]} — {session.history.length} answered
+            {MODE_LABEL[session.config.mode]} - {session.history.length} answered
           </p>
           <div className="mt-4 flex gap-3">
             <PillButton onClick={onResumeSession} className="flex-1">
@@ -57,7 +57,7 @@ export default function HomeScreen({
       <div className="relative z-10 flex w-full max-w-sm flex-col gap-3">
         <ModeOptionCard
           title="Casual"
-          description="Practice without pressure — choose Learning or Guess mode next."
+          description="Practice without pressure - choose Learning or Guess mode next."
           onClick={onCasual}
         />
         <ModeOptionCard

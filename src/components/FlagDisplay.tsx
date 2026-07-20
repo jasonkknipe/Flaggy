@@ -14,7 +14,7 @@ interface FlagDisplayProps {
  *  `aspect-[4/3]`, not on the <img> itself. With the ratio fixed at the
  *  container level, the browser only ever has one degree of freedom to
  *  solve for (whichever of width/height the viewport constrains first) and
- *  derives the other correctly — on a narrow phone viewport, letting the
+ *  derives the other correctly - on a narrow phone viewport, letting the
  *  <img>'s own h-full/w-auto/max-w-full fight it out was the bug: height and
  *  width could get capped independently, leaving the rounded "card" shape
  *  slightly the wrong proportions even though object-contain kept the flag

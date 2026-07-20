@@ -8,11 +8,11 @@ interface LearningStudySheetProps {
   byIso2: Map<string, Country>
 }
 
-/** One tile per guess (not per country — a country missed then later
+/** One tile per guess (not per country - a country missed then later
  *  answered correctly shows up as two separate tiles, reflecting what
  *  actually happened). Border color carries correct/incorrect; the small
  *  badge repeats that non-visually so it's never colour-only. Deliberately
- *  no wrong-answer text — the flag and the correct name are what matter for
+ *  no wrong-answer text - the flag and the correct name are what matter for
  *  study, not what you typed. */
 export default function LearningStudySheet({ summary, byIso2 }: LearningStudySheetProps) {
   return (

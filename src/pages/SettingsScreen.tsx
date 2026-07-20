@@ -7,7 +7,12 @@ interface SettingsScreenProps {
   onBack: () => void
 }
 
-export default function SettingsScreen({ onResetStatistics, onResetLearningHistory, onClearCache, onBack }: SettingsScreenProps) {
+export default function SettingsScreen({
+  onResetStatistics,
+  onResetLearningHistory,
+  onClearCache,
+  onBack,
+}: SettingsScreenProps) {
   return (
     <div className="mx-auto flex min-h-dvh max-w-md flex-col gap-6 px-6 py-10">
       <h1 className="font-sans text-2xl font-bold text-ink">Settings</h1>
@@ -18,9 +23,10 @@ export default function SettingsScreen({ onResetStatistics, onResetLearningHisto
         actionLabel="Reset"
         onConfirm={onResetStatistics}
       />
+
       <SettingsRow
         title="Reset learning history"
-        description="Clears per-country flag accuracy — the data spaced repetition and future adaptive learning would use."
+        description="Clears per-country flag accuracy - the data spaced repetition and future adaptive learning would use."
         actionLabel="Reset"
         onConfirm={onResetLearningHistory}
       />

@@ -9,10 +9,10 @@ export type GameStep =
  * plan. This is the one place that encodes the actual behavioral difference
  * between the three modes:
  *
- * - Learning: one guess (country only — calling code/capital are never
+ * - Learning: one guess (country only - calling code/capital are never
  *   asked here), one combined reveal with the full info card.
  * - Guess: every asked field gets its own immediate reveal before the next
- *   field is asked — a "foothold" after each guess — then a final,
+ *   field is asked - a "foothold" after each guess - then a final,
  *   info-only reveal for anything that wasn't guessed (capital/calling code
  *   if their toggle was off for this session).
  * - Compete: every field is asked back-to-back with NO reveal in between,

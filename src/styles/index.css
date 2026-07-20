@@ -7,7 +7,7 @@
  *
  * Dark mode is automatic-only, following the OS (no in-app override): the
  * @media block further down redefines the same custom properties, so a
- * component written once as `bg-surface-card text-ink` adapts on its own —
+ * component written once as `bg-surface-card text-ink` adapts on its own -
  * no `dark:` variants scattered through the app.
  */
 @theme {

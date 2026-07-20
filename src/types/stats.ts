@@ -1,7 +1,7 @@
 import type { GuessField } from './quiz'
 
 export interface CountryAccuracy {
-  /** Flag/country-recognition accuracy only, per your call — calling code and
+  /** Flag/country-recognition accuracy only, per your call - calling code and
    *  capital accuracy aren't tracked per-country in v1, only in aggregate
    *  (see LifetimeStats.correctByField). */
   correct: number
@@ -19,7 +19,7 @@ export interface LifetimeStats {
   questionsAnswered: number
   correctByField: Partial<Record<GuessField, number>>
   askedByField: Partial<Record<GuessField, number>>
-  /** Consecutive correct *country* guesses specifically — the one guess that
+  /** Consecutive correct *country* guesses specifically - the one guess that
    *  happens in every mode, so it's the only fair constant to streak on. */
   currentStreak: number
   bestStreak: number

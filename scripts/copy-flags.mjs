@@ -4,7 +4,7 @@
  * plain <img src="..."> references (via import.meta.env.BASE_URL) instead
  * of bundler-specific dynamic-import-glob syntax, which is harder for me to
  * verify correctness of without a real Vite install to test against. Runs
- * automatically via the "postinstall" npm script, both locally and in CI —
+ * automatically via the "postinstall" npm script, both locally and in CI -
  * see package.json.
  */
 import { cp, mkdir } from 'node:fs/promises'
@@ -22,7 +22,7 @@ async function main() {
 }
 
 main().catch((err) => {
-  // Don't fail the whole `npm install` over this — a fresh clone where
+  // Don't fail the whole `npm install` over this - a fresh clone where
   // node_modules isn't fully in place yet shouldn't be a hard failure.
   console.warn(
     `Could not copy flag SVGs (${err.message}). Once "npm install" has ` +
