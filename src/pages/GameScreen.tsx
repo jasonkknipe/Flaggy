@@ -96,15 +96,14 @@ export default function GameScreen({
     onSessionEnd(session)
   }
 
-  // Enter also advances past a reveal step, in addition to clicking Next.
-  // Scoped to reveal steps only — during an ask step, Enter is already
-  // handled by the focused input itself (submit / select a suggestion), so
-  // this deliberately does nothing there to avoid double-handling it.
+  // Enter advances only when a reveal is already on screen. The answer inputs
+  // stop propagation for their submitting Enter, so users always see the
+  // correct/incorrect feedback before a separate Enter advances.
   // Re-subscribes on every render (cheap) rather than trying to track a
   // dependency array, so it always closes over the current step/guesses.
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
-      if (step?.kind === 'reveal' && event.key === 'Enter') {
+      if (step?.kind === 'reveal' && event.key === 'Enter' && !event.repeat) {
         event.preventDefault()
         handleRevealNext()
       }

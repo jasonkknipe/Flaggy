@@ -46,6 +46,10 @@ export default function AutocompleteInput({ label, options, onSubmit, placeholde
       setHighlighted((prev) => Math.max(prev - 1, -1))
     } else if (event.key === 'Enter') {
       event.preventDefault()
+      // Submission and reveal navigation both use Enter. Keep this keypress
+      // inside the input so the newly shown result is not immediately
+      // advanced by the game-level reveal shortcut.
+      event.stopPropagation()
       if (highlighted >= 0 && suggestions[highlighted]) {
         selectSuggestion(suggestions[highlighted])
       } else {

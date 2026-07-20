@@ -20,6 +20,9 @@ export default function CallingCodeInput({ onSubmit, autoFocus }: CallingCodeInp
   function handleKeyDown(event: KeyboardEvent<HTMLInputElement>) {
     if (event.key === 'Enter') {
       event.preventDefault()
+      // Do not let the Enter that checks an answer also advance the reveal
+      // panel. A subsequent Enter is handled by GameScreen as "Next".
+      event.stopPropagation()
       submit()
     }
   }
