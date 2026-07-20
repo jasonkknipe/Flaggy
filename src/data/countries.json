@@ -1,0 +1,2898 @@
+[
+  {
+    "iso2": "af",
+    "name": "Afghanistan",
+    "callingCode": "+93",
+    "capitals": [
+      "Kabul"
+    ],
+    "currency": "Afghan afghani",
+    "languages": [
+      "Dari",
+      "Pashto",
+      "Turkmen"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "al",
+    "name": "Albania",
+    "callingCode": "+355",
+    "capitals": [
+      "Tirana"
+    ],
+    "currency": "Albanian lek",
+    "languages": [
+      "Albanian"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "dz",
+    "name": "Algeria",
+    "callingCode": "+213",
+    "capitals": [
+      "Algiers"
+    ],
+    "currency": "Algerian dinar",
+    "languages": [
+      "Arabic"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "ad",
+    "name": "Andorra",
+    "callingCode": "+376",
+    "capitals": [
+      "Andorra la Vella"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "Catalan"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "ao",
+    "name": "Angola",
+    "callingCode": "+244",
+    "capitals": [
+      "Luanda"
+    ],
+    "currency": "Angolan kwanza",
+    "languages": [
+      "Portuguese"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "ag",
+    "name": "Antigua and Barbuda",
+    "callingCode": "+1268",
+    "capitals": [
+      "Saint John's"
+    ],
+    "currency": "Eastern Caribbean dollar",
+    "languages": [
+      "English"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "ar",
+    "name": "Argentina",
+    "callingCode": "+54",
+    "capitals": [
+      "Buenos Aires"
+    ],
+    "currency": "Argentine peso",
+    "languages": [
+      "Guaraní",
+      "Spanish"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "am",
+    "name": "Armenia",
+    "callingCode": "+374",
+    "capitals": [
+      "Yerevan"
+    ],
+    "currency": "Armenian dram",
+    "languages": [
+      "Armenian"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "au",
+    "name": "Australia",
+    "callingCode": "+61",
+    "capitals": [
+      "Canberra"
+    ],
+    "currency": "Australian dollar",
+    "languages": [
+      "English"
+    ],
+    "continent": "Oceania",
+    "population": 0
+  },
+  {
+    "iso2": "at",
+    "name": "Austria",
+    "callingCode": "+43",
+    "capitals": [
+      "Vienna"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "Austro-Bavarian German"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "az",
+    "name": "Azerbaijan",
+    "callingCode": "+994",
+    "capitals": [
+      "Baku"
+    ],
+    "currency": "Azerbaijani manat",
+    "languages": [
+      "Azerbaijani",
+      "Russian"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "bs",
+    "name": "Bahamas",
+    "callingCode": "+1242",
+    "capitals": [
+      "Nassau"
+    ],
+    "currency": "Bahamian dollar",
+    "languages": [
+      "English"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "bh",
+    "name": "Bahrain",
+    "callingCode": "+973",
+    "capitals": [
+      "Manama"
+    ],
+    "currency": "Bahraini dinar",
+    "languages": [
+      "Arabic"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "bd",
+    "name": "Bangladesh",
+    "callingCode": "+880",
+    "capitals": [
+      "Dhaka"
+    ],
+    "currency": "Bangladeshi taka",
+    "languages": [
+      "Bengali"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "bb",
+    "name": "Barbados",
+    "callingCode": "+1246",
+    "capitals": [
+      "Bridgetown"
+    ],
+    "currency": "Barbadian dollar",
+    "languages": [
+      "English"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "by",
+    "name": "Belarus",
+    "callingCode": "+375",
+    "capitals": [
+      "Minsk"
+    ],
+    "currency": "Belarusian ruble",
+    "languages": [
+      "Belarusian",
+      "Russian"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "be",
+    "name": "Belgium",
+    "callingCode": "+32",
+    "capitals": [
+      "Brussels"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "German",
+      "French",
+      "Dutch"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "bz",
+    "name": "Belize",
+    "callingCode": "+501",
+    "capitals": [
+      "Belmopan"
+    ],
+    "currency": "Belize dollar",
+    "languages": [
+      "Belizean Creole",
+      "English",
+      "Spanish"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "bj",
+    "name": "Benin",
+    "callingCode": "+229",
+    "capitals": [
+      "Porto-Novo"
+    ],
+    "currency": "West African CFA franc",
+    "languages": [
+      "French"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "bt",
+    "name": "Bhutan",
+    "callingCode": "+975",
+    "capitals": [
+      "Thimphu"
+    ],
+    "currency": "Bhutanese ngultrum",
+    "languages": [
+      "Dzongkha"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "bo",
+    "name": "Bolivia",
+    "callingCode": "+591",
+    "capitals": [
+      "Sucre"
+    ],
+    "currency": "Bolivian boliviano",
+    "languages": [
+      "Aymara",
+      "Guaraní",
+      "Quechua",
+      "Spanish"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "ba",
+    "name": "Bosnia and Herzegovina",
+    "callingCode": "+387",
+    "capitals": [
+      "Sarajevo"
+    ],
+    "currency": "Bosnia and Herzegovina convertible mark",
+    "languages": [
+      "Bosnian",
+      "Croatian",
+      "Serbian"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "bw",
+    "name": "Botswana",
+    "callingCode": "+267",
+    "capitals": [
+      "Gaborone"
+    ],
+    "currency": "Botswana pula",
+    "languages": [
+      "English",
+      "Tswana"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "br",
+    "name": "Brazil",
+    "callingCode": "+55",
+    "capitals": [
+      "Brasilia"
+    ],
+    "currency": "Brazilian real",
+    "languages": [
+      "Portuguese"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "bn",
+    "name": "Brunei",
+    "callingCode": "+673",
+    "capitals": [
+      "Bandar Seri Begawan"
+    ],
+    "currency": "Brunei dollar",
+    "languages": [
+      "Malay"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "bg",
+    "name": "Bulgaria",
+    "callingCode": "+359",
+    "capitals": [
+      "Sofia"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "Bulgarian"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "bf",
+    "name": "Burkina Faso",
+    "callingCode": "+226",
+    "capitals": [
+      "Ouagadougou"
+    ],
+    "currency": "West African CFA franc",
+    "languages": [
+      "French"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "bi",
+    "name": "Burundi",
+    "callingCode": "+257",
+    "capitals": [
+      "Gitega"
+    ],
+    "currency": "Burundian franc",
+    "languages": [
+      "French",
+      "Kirundi"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "kh",
+    "name": "Cambodia",
+    "callingCode": "+855",
+    "capitals": [
+      "Phnom Penh"
+    ],
+    "currency": "Cambodian riel",
+    "languages": [
+      "Khmer"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "cm",
+    "name": "Cameroon",
+    "callingCode": "+237",
+    "capitals": [
+      "Yaounde"
+    ],
+    "currency": "Central African CFA franc",
+    "languages": [
+      "English",
+      "French"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "ca",
+    "name": "Canada",
+    "callingCode": "+1204",
+    "capitals": [
+      "Ottawa"
+    ],
+    "currency": "Canadian dollar",
+    "languages": [
+      "English",
+      "French"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "cv",
+    "name": "Cape Verde",
+    "callingCode": "+238",
+    "capitals": [
+      "Praia"
+    ],
+    "currency": "Cape Verdean escudo",
+    "languages": [
+      "Portuguese"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "cf",
+    "name": "Central African Republic",
+    "callingCode": "+236",
+    "capitals": [
+      "Bangui"
+    ],
+    "currency": "Central African CFA franc",
+    "languages": [
+      "French",
+      "Sango"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "td",
+    "name": "Chad",
+    "callingCode": "+235",
+    "capitals": [
+      "N'Djamena"
+    ],
+    "currency": "Central African CFA franc",
+    "languages": [
+      "Arabic",
+      "French"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "cl",
+    "name": "Chile",
+    "callingCode": "+56",
+    "capitals": [
+      "Santiago"
+    ],
+    "currency": "Chilean peso",
+    "languages": [
+      "Spanish"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "cn",
+    "name": "China",
+    "callingCode": "+86",
+    "capitals": [
+      "Beijing"
+    ],
+    "currency": "Chinese yuan",
+    "languages": [
+      "Chinese"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "co",
+    "name": "Colombia",
+    "callingCode": "+57",
+    "capitals": [
+      "Bogota"
+    ],
+    "currency": "Colombian peso",
+    "languages": [
+      "Spanish"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "km",
+    "name": "Comoros",
+    "callingCode": "+269",
+    "capitals": [
+      "Moroni"
+    ],
+    "currency": "Comorian franc",
+    "languages": [
+      "Arabic",
+      "French",
+      "Comorian"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "cg",
+    "name": "Congo",
+    "callingCode": "+242",
+    "capitals": [
+      "Brazzaville"
+    ],
+    "currency": "Central African CFA franc",
+    "languages": [
+      "French",
+      "Kikongo",
+      "Lingala"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "cr",
+    "name": "Costa Rica",
+    "callingCode": "+506",
+    "capitals": [
+      "San Jose"
+    ],
+    "currency": "Costa Rican colón",
+    "languages": [
+      "Spanish"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "hr",
+    "name": "Croatia",
+    "callingCode": "+385",
+    "capitals": [
+      "Zagreb"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "Croatian"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "cu",
+    "name": "Cuba",
+    "callingCode": "+53",
+    "capitals": [
+      "Havana"
+    ],
+    "currency": "Cuban convertible peso",
+    "languages": [
+      "Spanish"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "cy",
+    "name": "Cyprus",
+    "callingCode": "+357",
+    "capitals": [
+      "Nicosia"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "Greek",
+      "Turkish"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "cz",
+    "name": "Czechia",
+    "callingCode": "+420",
+    "capitals": [
+      "Prague"
+    ],
+    "currency": "Czech koruna",
+    "languages": [
+      "Czech",
+      "Slovak"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "dk",
+    "name": "Denmark",
+    "callingCode": "+45",
+    "capitals": [
+      "Copenhagen"
+    ],
+    "currency": "Danish krone",
+    "languages": [
+      "Danish"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "dj",
+    "name": "Djibouti",
+    "callingCode": "+253",
+    "capitals": [
+      "Djibouti"
+    ],
+    "currency": "Djiboutian franc",
+    "languages": [
+      "Arabic",
+      "French"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "dm",
+    "name": "Dominica",
+    "callingCode": "+1767",
+    "capitals": [
+      "Roseau"
+    ],
+    "currency": "Eastern Caribbean dollar",
+    "languages": [
+      "English"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "do",
+    "name": "Dominican Republic",
+    "callingCode": "+1809",
+    "capitals": [
+      "Santo Domingo"
+    ],
+    "currency": "Dominican peso",
+    "languages": [
+      "Spanish"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "cd",
+    "name": "DR Congo",
+    "callingCode": "+243",
+    "capitals": [
+      "Kinshasa"
+    ],
+    "currency": "Congolese franc",
+    "languages": [
+      "French",
+      "Kikongo",
+      "Lingala",
+      "Tshiluba",
+      "Swahili"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "ec",
+    "name": "Ecuador",
+    "callingCode": "+593",
+    "capitals": [
+      "Quito"
+    ],
+    "currency": "United States dollar",
+    "languages": [
+      "Spanish"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "eg",
+    "name": "Egypt",
+    "callingCode": "+20",
+    "capitals": [
+      "Cairo"
+    ],
+    "currency": "Egyptian pound",
+    "languages": [
+      "Arabic"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "sv",
+    "name": "El Salvador",
+    "callingCode": "+503",
+    "capitals": [
+      "San Salvador"
+    ],
+    "currency": "United States dollar",
+    "languages": [
+      "Spanish"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "gq",
+    "name": "Equatorial Guinea",
+    "callingCode": "+240",
+    "capitals": [
+      "Malabo"
+    ],
+    "currency": "Central African CFA franc",
+    "languages": [
+      "French",
+      "Portuguese",
+      "Spanish"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "er",
+    "name": "Eritrea",
+    "callingCode": "+291",
+    "capitals": [
+      "Asmara"
+    ],
+    "currency": "Eritrean nakfa",
+    "languages": [
+      "Arabic",
+      "English",
+      "Tigrinya"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "ee",
+    "name": "Estonia",
+    "callingCode": "+372",
+    "capitals": [
+      "Tallinn"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "Estonian"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "sz",
+    "name": "Eswatini",
+    "callingCode": "+268",
+    "capitals": [
+      "Lobamba"
+    ],
+    "currency": "Swazi lilangeni",
+    "languages": [
+      "English",
+      "Swazi"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "et",
+    "name": "Ethiopia",
+    "callingCode": "+251",
+    "capitals": [
+      "Addis Ababa"
+    ],
+    "currency": "Ethiopian birr",
+    "languages": [
+      "Amharic"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "fj",
+    "name": "Fiji",
+    "callingCode": "+679",
+    "capitals": [
+      "Suva"
+    ],
+    "currency": "Fijian dollar",
+    "languages": [
+      "English",
+      "Fijian",
+      "Fiji Hindi"
+    ],
+    "continent": "Oceania",
+    "population": 0
+  },
+  {
+    "iso2": "fi",
+    "name": "Finland",
+    "callingCode": "+358",
+    "capitals": [
+      "Helsinki"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "Finnish",
+      "Swedish"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "fr",
+    "name": "France",
+    "callingCode": "+33",
+    "capitals": [
+      "Paris"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "French"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "ga",
+    "name": "Gabon",
+    "callingCode": "+241",
+    "capitals": [
+      "Libreville"
+    ],
+    "currency": "Central African CFA franc",
+    "languages": [
+      "French"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "gm",
+    "name": "Gambia",
+    "callingCode": "+220",
+    "capitals": [
+      "Banjul"
+    ],
+    "currency": "dalasi",
+    "languages": [
+      "English"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "ge",
+    "name": "Georgia",
+    "callingCode": "+995",
+    "capitals": [
+      "Tbilisi"
+    ],
+    "currency": "lari",
+    "languages": [
+      "Georgian"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "de",
+    "name": "Germany",
+    "callingCode": "+49",
+    "capitals": [
+      "Berlin"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "German"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "gh",
+    "name": "Ghana",
+    "callingCode": "+233",
+    "capitals": [
+      "Accra"
+    ],
+    "currency": "Ghanaian cedi",
+    "languages": [
+      "English"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "gr",
+    "name": "Greece",
+    "callingCode": "+30",
+    "capitals": [
+      "Athens"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "Greek"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "gd",
+    "name": "Grenada",
+    "callingCode": "+1473",
+    "capitals": [
+      "St. George's"
+    ],
+    "currency": "Eastern Caribbean dollar",
+    "languages": [
+      "English"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "gt",
+    "name": "Guatemala",
+    "callingCode": "+502",
+    "capitals": [
+      "Guatemala City"
+    ],
+    "currency": "Guatemalan quetzal",
+    "languages": [
+      "Spanish"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "gn",
+    "name": "Guinea",
+    "callingCode": "+224",
+    "capitals": [
+      "Conakry"
+    ],
+    "currency": "Guinean franc",
+    "languages": [
+      "French"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "gw",
+    "name": "Guinea-Bissau",
+    "callingCode": "+245",
+    "capitals": [
+      "Bissau"
+    ],
+    "currency": "West African CFA franc",
+    "languages": [
+      "Portuguese",
+      "Upper Guinea Creole"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "gy",
+    "name": "Guyana",
+    "callingCode": "+592",
+    "capitals": [
+      "Georgetown"
+    ],
+    "currency": "Guyanese dollar",
+    "languages": [
+      "English"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "ht",
+    "name": "Haiti",
+    "callingCode": "+509",
+    "capitals": [
+      "Port-au-Prince"
+    ],
+    "currency": "Haitian gourde",
+    "languages": [
+      "French",
+      "Haitian Creole"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "hn",
+    "name": "Honduras",
+    "callingCode": "+504",
+    "capitals": [
+      "Tegucigalpa"
+    ],
+    "currency": "Honduran lempira",
+    "languages": [
+      "Spanish"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "hu",
+    "name": "Hungary",
+    "callingCode": "+36",
+    "capitals": [
+      "Budapest"
+    ],
+    "currency": "Hungarian forint",
+    "languages": [
+      "Hungarian"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "is",
+    "name": "Iceland",
+    "callingCode": "+354",
+    "capitals": [
+      "Reykjavik"
+    ],
+    "currency": "Icelandic króna",
+    "languages": [
+      "Icelandic"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "in",
+    "name": "India",
+    "callingCode": "+91",
+    "capitals": [
+      "New Delhi"
+    ],
+    "currency": "Indian rupee",
+    "languages": [
+      "English",
+      "Hindi",
+      "Tamil"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "id",
+    "name": "Indonesia",
+    "callingCode": "+62",
+    "capitals": [
+      "Jakarta"
+    ],
+    "currency": "Indonesian rupiah",
+    "languages": [
+      "Indonesian"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "ir",
+    "name": "Iran",
+    "callingCode": "+98",
+    "capitals": [
+      "Tehran"
+    ],
+    "currency": "Iranian rial",
+    "languages": [
+      "Persian (Farsi)"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "iq",
+    "name": "Iraq",
+    "callingCode": "+964",
+    "capitals": [
+      "Baghdad"
+    ],
+    "currency": "Iraqi dinar",
+    "languages": [
+      "Arabic",
+      "Aramaic",
+      "Sorani"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "ie",
+    "name": "Ireland",
+    "callingCode": "+353",
+    "capitals": [
+      "Dublin"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "English",
+      "Irish"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "il",
+    "name": "Israel",
+    "callingCode": "+972",
+    "capitals": [
+      "Jerusalem"
+    ],
+    "currency": "Israeli new shekel",
+    "languages": [
+      "Arabic",
+      "Hebrew"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "it",
+    "name": "Italy",
+    "callingCode": "+39",
+    "capitals": [
+      "Rome"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "Italian"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "ci",
+    "name": "Ivory Coast",
+    "callingCode": "+225",
+    "capitals": [
+      "Yamoussoukro"
+    ],
+    "currency": "West African CFA franc",
+    "languages": [
+      "French"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "jm",
+    "name": "Jamaica",
+    "callingCode": "+1876",
+    "capitals": [
+      "Kingston"
+    ],
+    "currency": "Jamaican dollar",
+    "languages": [
+      "English",
+      "Jamaican Patois"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "jp",
+    "name": "Japan",
+    "callingCode": "+81",
+    "capitals": [
+      "Tokyo"
+    ],
+    "currency": "Japanese yen",
+    "languages": [
+      "Japanese"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "jo",
+    "name": "Jordan",
+    "callingCode": "+962",
+    "capitals": [
+      "Amman"
+    ],
+    "currency": "Jordanian dinar",
+    "languages": [
+      "Arabic"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "kz",
+    "name": "Kazakhstan",
+    "callingCode": "+76",
+    "capitals": [
+      "Astana"
+    ],
+    "currency": "Kazakhstani tenge",
+    "languages": [
+      "Kazakh",
+      "Russian"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "ke",
+    "name": "Kenya",
+    "callingCode": "+254",
+    "capitals": [
+      "Nairobi"
+    ],
+    "currency": "Kenyan shilling",
+    "languages": [
+      "English",
+      "Swahili"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "ki",
+    "name": "Kiribati",
+    "callingCode": "+686",
+    "capitals": [
+      "South Tarawa"
+    ],
+    "currency": "Australian dollar",
+    "languages": [
+      "English",
+      "Gilbertese"
+    ],
+    "continent": "Oceania",
+    "population": 0
+  },
+  {
+    "iso2": "kw",
+    "name": "Kuwait",
+    "callingCode": "+965",
+    "capitals": [
+      "Kuwait City"
+    ],
+    "currency": "Kuwaiti dinar",
+    "languages": [
+      "Arabic"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "kg",
+    "name": "Kyrgyzstan",
+    "callingCode": "+996",
+    "capitals": [
+      "Bishkek"
+    ],
+    "currency": "Kyrgyzstani som",
+    "languages": [
+      "Kyrgyz",
+      "Russian"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "la",
+    "name": "Laos",
+    "callingCode": "+856",
+    "capitals": [
+      "Vientiane"
+    ],
+    "currency": "Lao kip",
+    "languages": [
+      "Lao"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "lv",
+    "name": "Latvia",
+    "callingCode": "+371",
+    "capitals": [
+      "Riga"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "Latvian"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "lb",
+    "name": "Lebanon",
+    "callingCode": "+961",
+    "capitals": [
+      "Beirut"
+    ],
+    "currency": "Lebanese pound",
+    "languages": [
+      "Arabic",
+      "French"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "ls",
+    "name": "Lesotho",
+    "callingCode": "+266",
+    "capitals": [
+      "Maseru"
+    ],
+    "currency": "Lesotho loti",
+    "languages": [
+      "English",
+      "Sotho"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "lr",
+    "name": "Liberia",
+    "callingCode": "+231",
+    "capitals": [
+      "Monrovia"
+    ],
+    "currency": "Liberian dollar",
+    "languages": [
+      "English"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "ly",
+    "name": "Libya",
+    "callingCode": "+218",
+    "capitals": [
+      "Tripoli"
+    ],
+    "currency": "Libyan dinar",
+    "languages": [
+      "Arabic"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "li",
+    "name": "Liechtenstein",
+    "callingCode": "+423",
+    "capitals": [
+      "Vaduz"
+    ],
+    "currency": "Swiss franc",
+    "languages": [
+      "German"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "lt",
+    "name": "Lithuania",
+    "callingCode": "+370",
+    "capitals": [
+      "Vilnius"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "Lithuanian"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "lu",
+    "name": "Luxembourg",
+    "callingCode": "+352",
+    "capitals": [
+      "Luxembourg"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "German",
+      "French",
+      "Luxembourgish"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "mg",
+    "name": "Madagascar",
+    "callingCode": "+261",
+    "capitals": [
+      "Antananarivo"
+    ],
+    "currency": "Malagasy ariary",
+    "languages": [
+      "French",
+      "Malagasy"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "mw",
+    "name": "Malawi",
+    "callingCode": "+265",
+    "capitals": [
+      "Lilongwe"
+    ],
+    "currency": "Malawian kwacha",
+    "languages": [
+      "English",
+      "Chewa"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "my",
+    "name": "Malaysia",
+    "callingCode": "+60",
+    "capitals": [
+      "Kuala Lumpur"
+    ],
+    "currency": "Malaysian ringgit",
+    "languages": [
+      "English",
+      "Malay"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "mv",
+    "name": "Maldives",
+    "callingCode": "+960",
+    "capitals": [
+      "Male"
+    ],
+    "currency": "Maldivian rufiyaa",
+    "languages": [
+      "Maldivian"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "ml",
+    "name": "Mali",
+    "callingCode": "+223",
+    "capitals": [
+      "Bamako"
+    ],
+    "currency": "West African CFA franc",
+    "languages": [
+      "French"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "mt",
+    "name": "Malta",
+    "callingCode": "+356",
+    "capitals": [
+      "Valletta"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "English",
+      "Maltese"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "mh",
+    "name": "Marshall Islands",
+    "callingCode": "+692",
+    "capitals": [
+      "Majuro"
+    ],
+    "currency": "United States dollar",
+    "languages": [
+      "English",
+      "Marshallese"
+    ],
+    "continent": "Oceania",
+    "population": 0
+  },
+  {
+    "iso2": "mr",
+    "name": "Mauritania",
+    "callingCode": "+222",
+    "capitals": [
+      "Nouakchott"
+    ],
+    "currency": "Mauritanian ouguiya",
+    "languages": [
+      "Arabic"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "mu",
+    "name": "Mauritius",
+    "callingCode": "+230",
+    "capitals": [
+      "Port Louis"
+    ],
+    "currency": "Mauritian rupee",
+    "languages": [
+      "English",
+      "French",
+      "Mauritian Creole"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "mx",
+    "name": "Mexico",
+    "callingCode": "+52",
+    "capitals": [
+      "Mexico City"
+    ],
+    "currency": "Mexican peso",
+    "languages": [
+      "Spanish"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "fm",
+    "name": "Micronesia",
+    "callingCode": "+691",
+    "capitals": [
+      "Palikir"
+    ],
+    "currency": "",
+    "languages": [
+      "English"
+    ],
+    "continent": "Oceania",
+    "population": 0
+  },
+  {
+    "iso2": "md",
+    "name": "Moldova",
+    "callingCode": "+373",
+    "capitals": [
+      "Chisinau"
+    ],
+    "currency": "Moldovan leu",
+    "languages": [
+      "Moldavian"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "mc",
+    "name": "Monaco",
+    "callingCode": "+377",
+    "capitals": [
+      "Monaco"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "French"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "mn",
+    "name": "Mongolia",
+    "callingCode": "+976",
+    "capitals": [
+      "Ulan Bator"
+    ],
+    "currency": "Mongolian tögrög",
+    "languages": [
+      "Mongolian"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "me",
+    "name": "Montenegro",
+    "callingCode": "+382",
+    "capitals": [
+      "Podgorica"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "Montenegrin"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "ma",
+    "name": "Morocco",
+    "callingCode": "+212",
+    "capitals": [
+      "Rabat"
+    ],
+    "currency": "Moroccan dirham",
+    "languages": [
+      "Arabic",
+      "Berber"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "mz",
+    "name": "Mozambique",
+    "callingCode": "+258",
+    "capitals": [
+      "Maputo"
+    ],
+    "currency": "Mozambican metical",
+    "languages": [
+      "Portuguese"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "mm",
+    "name": "Myanmar",
+    "callingCode": "+95",
+    "capitals": [
+      "Naypyidaw"
+    ],
+    "currency": "Burmese kyat",
+    "languages": [
+      "Burmese"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "na",
+    "name": "Namibia",
+    "callingCode": "+264",
+    "capitals": [
+      "Windhoek"
+    ],
+    "currency": "Namibian dollar",
+    "languages": [
+      "Afrikaans",
+      "German",
+      "English",
+      "Herero",
+      "Khoekhoe",
+      "Kwangali",
+      "Lozi",
+      "Ndonga",
+      "Tswana"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "nr",
+    "name": "Nauru",
+    "callingCode": "+674",
+    "capitals": [
+      "Yaren"
+    ],
+    "currency": "Australian dollar",
+    "languages": [
+      "English",
+      "Nauru"
+    ],
+    "continent": "Oceania",
+    "population": 0
+  },
+  {
+    "iso2": "np",
+    "name": "Nepal",
+    "callingCode": "+977",
+    "capitals": [
+      "Kathmandu"
+    ],
+    "currency": "Nepalese rupee",
+    "languages": [
+      "Nepali"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "nl",
+    "name": "Netherlands",
+    "callingCode": "+31",
+    "capitals": [
+      "Amsterdam"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "Dutch"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "nz",
+    "name": "New Zealand",
+    "callingCode": "+64",
+    "capitals": [
+      "Wellington"
+    ],
+    "currency": "New Zealand dollar",
+    "languages": [
+      "English",
+      "Māori",
+      "New Zealand Sign Language"
+    ],
+    "continent": "Oceania",
+    "population": 0
+  },
+  {
+    "iso2": "ni",
+    "name": "Nicaragua",
+    "callingCode": "+505",
+    "capitals": [
+      "Managua"
+    ],
+    "currency": "Nicaraguan córdoba",
+    "languages": [
+      "Spanish"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "ne",
+    "name": "Niger",
+    "callingCode": "+227",
+    "capitals": [
+      "Niamey"
+    ],
+    "currency": "West African CFA franc",
+    "languages": [
+      "French"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "ng",
+    "name": "Nigeria",
+    "callingCode": "+234",
+    "capitals": [
+      "Abuja"
+    ],
+    "currency": "Nigerian naira",
+    "languages": [
+      "English"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "kp",
+    "name": "North Korea",
+    "callingCode": "+850",
+    "capitals": [
+      "Pyongyang"
+    ],
+    "currency": "North Korean won",
+    "languages": [
+      "Korean"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "mk",
+    "name": "North Macedonia",
+    "callingCode": "+389",
+    "capitals": [
+      "Skopje"
+    ],
+    "currency": "denar",
+    "languages": [
+      "Macedonian"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "no",
+    "name": "Norway",
+    "callingCode": "+47",
+    "capitals": [
+      "Oslo"
+    ],
+    "currency": "Norwegian krone",
+    "languages": [
+      "Norwegian Nynorsk",
+      "Norwegian Bokmål",
+      "Sami"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "om",
+    "name": "Oman",
+    "callingCode": "+968",
+    "capitals": [
+      "Muscat"
+    ],
+    "currency": "Omani rial",
+    "languages": [
+      "Arabic"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "pk",
+    "name": "Pakistan",
+    "callingCode": "+92",
+    "capitals": [
+      "Islamabad"
+    ],
+    "currency": "Pakistani rupee",
+    "languages": [
+      "English",
+      "Urdu"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "pw",
+    "name": "Palau",
+    "callingCode": "+680",
+    "capitals": [
+      "Ngerulmud"
+    ],
+    "currency": "United States dollar",
+    "languages": [
+      "English",
+      "Palauan"
+    ],
+    "continent": "Oceania",
+    "population": 0
+  },
+  {
+    "iso2": "ps",
+    "name": "Palestine",
+    "callingCode": "+970",
+    "capitals": [
+      "Ramallah"
+    ],
+    "currency": "Egyptian pound",
+    "languages": [
+      "Arabic"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "pa",
+    "name": "Panama",
+    "callingCode": "+507",
+    "capitals": [
+      "Panama City"
+    ],
+    "currency": "Panamanian balboa",
+    "languages": [
+      "Spanish"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "pg",
+    "name": "Papua New Guinea",
+    "callingCode": "+675",
+    "capitals": [
+      "Port Moresby"
+    ],
+    "currency": "Papua New Guinean kina",
+    "languages": [
+      "English",
+      "Hiri Motu",
+      "Tok Pisin"
+    ],
+    "continent": "Oceania",
+    "population": 0
+  },
+  {
+    "iso2": "py",
+    "name": "Paraguay",
+    "callingCode": "+595",
+    "capitals": [
+      "Asuncion"
+    ],
+    "currency": "Paraguayan guaraní",
+    "languages": [
+      "Guaraní",
+      "Spanish"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "pe",
+    "name": "Peru",
+    "callingCode": "+51",
+    "capitals": [
+      "Lima"
+    ],
+    "currency": "Peruvian sol",
+    "languages": [
+      "Aymara",
+      "Quechua",
+      "Spanish"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "ph",
+    "name": "Philippines",
+    "callingCode": "+63",
+    "capitals": [
+      "Manila"
+    ],
+    "currency": "Philippine peso",
+    "languages": [
+      "English",
+      "Filipino"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "pl",
+    "name": "Poland",
+    "callingCode": "+48",
+    "capitals": [
+      "Warsaw"
+    ],
+    "currency": "Polish złoty",
+    "languages": [
+      "Polish"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "pt",
+    "name": "Portugal",
+    "callingCode": "+351",
+    "capitals": [
+      "Lisbon"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "Portuguese"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "qa",
+    "name": "Qatar",
+    "callingCode": "+974",
+    "capitals": [
+      "Doha"
+    ],
+    "currency": "Qatari riyal",
+    "languages": [
+      "Arabic"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "ro",
+    "name": "Romania",
+    "callingCode": "+40",
+    "capitals": [
+      "Bucharest"
+    ],
+    "currency": "Romanian leu",
+    "languages": [
+      "Romanian"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "ru",
+    "name": "Russia",
+    "callingCode": "+73",
+    "capitals": [
+      "Moscow"
+    ],
+    "currency": "Russian ruble",
+    "languages": [
+      "Russian"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "rw",
+    "name": "Rwanda",
+    "callingCode": "+250",
+    "capitals": [
+      "Kigali"
+    ],
+    "currency": "Rwandan franc",
+    "languages": [
+      "English",
+      "French",
+      "Kinyarwanda"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "kn",
+    "name": "Saint Kitts and Nevis",
+    "callingCode": "+1869",
+    "capitals": [
+      "Basseterre"
+    ],
+    "currency": "Eastern Caribbean dollar",
+    "languages": [
+      "English"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "lc",
+    "name": "Saint Lucia",
+    "callingCode": "+1758",
+    "capitals": [
+      "Castries"
+    ],
+    "currency": "Eastern Caribbean dollar",
+    "languages": [
+      "English"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "vc",
+    "name": "Saint Vincent and the Grenadines",
+    "callingCode": "+1784",
+    "capitals": [
+      "Kingstown"
+    ],
+    "currency": "Eastern Caribbean dollar",
+    "languages": [
+      "English"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "ws",
+    "name": "Samoa",
+    "callingCode": "+685",
+    "capitals": [
+      "Apia"
+    ],
+    "currency": "Samoan tālā",
+    "languages": [
+      "English",
+      "Samoan"
+    ],
+    "continent": "Oceania",
+    "population": 0
+  },
+  {
+    "iso2": "sm",
+    "name": "San Marino",
+    "callingCode": "+378",
+    "capitals": [
+      "City of San Marino"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "Italian"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "st",
+    "name": "Sao Tome and Principe",
+    "callingCode": "+239",
+    "capitals": [
+      "Sao Tome"
+    ],
+    "currency": "São Tomé and Príncipe dobra",
+    "languages": [
+      "Portuguese"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "sa",
+    "name": "Saudi Arabia",
+    "callingCode": "+966",
+    "capitals": [
+      "Riyadh"
+    ],
+    "currency": "Saudi riyal",
+    "languages": [
+      "Arabic"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "sn",
+    "name": "Senegal",
+    "callingCode": "+221",
+    "capitals": [
+      "Dakar"
+    ],
+    "currency": "West African CFA franc",
+    "languages": [
+      "French"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "rs",
+    "name": "Serbia",
+    "callingCode": "+381",
+    "capitals": [
+      "Belgrade"
+    ],
+    "currency": "Serbian dinar",
+    "languages": [
+      "Serbian"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "sc",
+    "name": "Seychelles",
+    "callingCode": "+248",
+    "capitals": [
+      "Victoria"
+    ],
+    "currency": "Seychellois rupee",
+    "languages": [
+      "Seychellois Creole",
+      "English",
+      "French"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "sl",
+    "name": "Sierra Leone",
+    "callingCode": "+232",
+    "capitals": [
+      "Freetown"
+    ],
+    "currency": "Sierra Leonean leone",
+    "languages": [
+      "English"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "sg",
+    "name": "Singapore",
+    "callingCode": "+65",
+    "capitals": [
+      "Singapore"
+    ],
+    "currency": "Singapore dollar",
+    "languages": [
+      "English",
+      "Malay",
+      "Tamil",
+      "Chinese"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "sk",
+    "name": "Slovakia",
+    "callingCode": "+421",
+    "capitals": [
+      "Bratislava"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "Slovak"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "si",
+    "name": "Slovenia",
+    "callingCode": "+386",
+    "capitals": [
+      "Ljubljana"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "Slovene"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "sb",
+    "name": "Solomon Islands",
+    "callingCode": "+677",
+    "capitals": [
+      "Honiara"
+    ],
+    "currency": "Solomon Islands dollar",
+    "languages": [
+      "English"
+    ],
+    "continent": "Oceania",
+    "population": 0
+  },
+  {
+    "iso2": "so",
+    "name": "Somalia",
+    "callingCode": "+252",
+    "capitals": [
+      "Mogadishu"
+    ],
+    "currency": "Somali shilling",
+    "languages": [
+      "Arabic",
+      "Somali"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "za",
+    "name": "South Africa",
+    "callingCode": "+27",
+    "capitals": [
+      "Pretoria",
+      "Bloemfontein",
+      "Cape Town"
+    ],
+    "currency": "South African rand",
+    "languages": [
+      "Afrikaans",
+      "English",
+      "Southern Ndebele",
+      "Northern Sotho",
+      "Southern Sotho",
+      "Swazi",
+      "Tswana",
+      "Tsonga",
+      "Venda",
+      "Xhosa",
+      "Zulu"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "kr",
+    "name": "South Korea",
+    "callingCode": "+82",
+    "capitals": [
+      "Seoul"
+    ],
+    "currency": "South Korean won",
+    "languages": [
+      "Korean"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "ss",
+    "name": "South Sudan",
+    "callingCode": "+211",
+    "capitals": [
+      "Juba"
+    ],
+    "currency": "South Sudanese pound",
+    "languages": [
+      "English"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "es",
+    "name": "Spain",
+    "callingCode": "+34",
+    "capitals": [
+      "Madrid"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "Spanish"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "lk",
+    "name": "Sri Lanka",
+    "callingCode": "+94",
+    "capitals": [
+      "Colombo"
+    ],
+    "currency": "Sri Lankan rupee",
+    "languages": [
+      "Sinhala",
+      "Tamil"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "sd",
+    "name": "Sudan",
+    "callingCode": "+249",
+    "capitals": [
+      "Khartoum"
+    ],
+    "currency": "Sudanese pound",
+    "languages": [
+      "Arabic",
+      "English"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "sr",
+    "name": "Suriname",
+    "callingCode": "+597",
+    "capitals": [
+      "Paramaribo"
+    ],
+    "currency": "Surinamese dollar",
+    "languages": [
+      "Dutch"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "se",
+    "name": "Sweden",
+    "callingCode": "+46",
+    "capitals": [
+      "Stockholm"
+    ],
+    "currency": "Swedish krona",
+    "languages": [
+      "Swedish"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "ch",
+    "name": "Switzerland",
+    "callingCode": "+41",
+    "capitals": [
+      "Bern"
+    ],
+    "currency": "Swiss franc",
+    "languages": [
+      "French",
+      "Swiss German",
+      "Italian",
+      "Romansh"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "sy",
+    "name": "Syria",
+    "callingCode": "+963",
+    "capitals": [
+      "Damascus"
+    ],
+    "currency": "Syrian pound",
+    "languages": [
+      "Arabic"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "tw",
+    "name": "Taiwan",
+    "callingCode": "+886",
+    "capitals": [
+      "Taipei"
+    ],
+    "currency": "New Taiwan dollar",
+    "languages": [
+      "Chinese"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "tj",
+    "name": "Tajikistan",
+    "callingCode": "+992",
+    "capitals": [
+      "Dushanbe"
+    ],
+    "currency": "Tajikistani somoni",
+    "languages": [
+      "Russian",
+      "Tajik"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "tz",
+    "name": "Tanzania",
+    "callingCode": "+255",
+    "capitals": [
+      "Dodoma"
+    ],
+    "currency": "Tanzanian shilling",
+    "languages": [
+      "English",
+      "Swahili"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "th",
+    "name": "Thailand",
+    "callingCode": "+66",
+    "capitals": [
+      "Bangkok"
+    ],
+    "currency": "Thai baht",
+    "languages": [
+      "Thai"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "tl",
+    "name": "Timor-Leste",
+    "callingCode": "+670",
+    "capitals": [
+      "Dili"
+    ],
+    "currency": "United States dollar",
+    "languages": [
+      "Portuguese",
+      "Tetum"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "tg",
+    "name": "Togo",
+    "callingCode": "+228",
+    "capitals": [
+      "Lome"
+    ],
+    "currency": "West African CFA franc",
+    "languages": [
+      "French"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "to",
+    "name": "Tonga",
+    "callingCode": "+676",
+    "capitals": [
+      "Nuku'alofa"
+    ],
+    "currency": "Tongan paʻanga",
+    "languages": [
+      "English",
+      "Tongan"
+    ],
+    "continent": "Oceania",
+    "population": 0
+  },
+  {
+    "iso2": "tt",
+    "name": "Trinidad and Tobago",
+    "callingCode": "+1868",
+    "capitals": [
+      "Port of Spain"
+    ],
+    "currency": "Trinidad and Tobago dollar",
+    "languages": [
+      "English"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "tn",
+    "name": "Tunisia",
+    "callingCode": "+216",
+    "capitals": [
+      "Tunis"
+    ],
+    "currency": "Tunisian dinar",
+    "languages": [
+      "Arabic"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "tr",
+    "name": "Turkiye",
+    "callingCode": "+90",
+    "capitals": [
+      "Ankara"
+    ],
+    "currency": "Turkish lira",
+    "languages": [
+      "Turkish"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "tm",
+    "name": "Turkmenistan",
+    "callingCode": "+993",
+    "capitals": [
+      "Ashgabat"
+    ],
+    "currency": "Turkmenistan manat",
+    "languages": [
+      "Russian",
+      "Turkmen"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "tv",
+    "name": "Tuvalu",
+    "callingCode": "+688",
+    "capitals": [
+      "Funafuti"
+    ],
+    "currency": "Australian dollar",
+    "languages": [
+      "English",
+      "Tuvaluan"
+    ],
+    "continent": "Oceania",
+    "population": 0
+  },
+  {
+    "iso2": "ug",
+    "name": "Uganda",
+    "callingCode": "+256",
+    "capitals": [
+      "Kampala"
+    ],
+    "currency": "Ugandan shilling",
+    "languages": [
+      "English",
+      "Swahili"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "ua",
+    "name": "Ukraine",
+    "callingCode": "+380",
+    "capitals": [
+      "Kyiv"
+    ],
+    "currency": "Ukrainian hryvnia",
+    "languages": [
+      "Ukrainian"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "ae",
+    "name": "United Arab Emirates",
+    "callingCode": "+971",
+    "capitals": [
+      "Abu Dhabi"
+    ],
+    "currency": "United Arab Emirates dirham",
+    "languages": [
+      "Arabic"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "gb",
+    "name": "United Kingdom",
+    "callingCode": "+44",
+    "capitals": [
+      "London"
+    ],
+    "currency": "British pound",
+    "languages": [
+      "English"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "us",
+    "name": "United States",
+    "callingCode": "+1201",
+    "capitals": [
+      "Washington D.C."
+    ],
+    "currency": "United States dollar",
+    "languages": [
+      "English"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "uy",
+    "name": "Uruguay",
+    "callingCode": "+598",
+    "capitals": [
+      "Montevideo"
+    ],
+    "currency": "Uruguayan peso",
+    "languages": [
+      "Spanish"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "uz",
+    "name": "Uzbekistan",
+    "callingCode": "+998",
+    "capitals": [
+      "Tashkent"
+    ],
+    "currency": "Uzbekistani soʻm",
+    "languages": [
+      "Russian",
+      "Uzbek"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "vu",
+    "name": "Vanuatu",
+    "callingCode": "+678",
+    "capitals": [
+      "Port Vila"
+    ],
+    "currency": "Vanuatu vatu",
+    "languages": [
+      "Bislama",
+      "English",
+      "French"
+    ],
+    "continent": "Oceania",
+    "population": 0
+  },
+  {
+    "iso2": "va",
+    "name": "Vatican City",
+    "callingCode": "+3906698",
+    "capitals": [
+      "Vatican City"
+    ],
+    "currency": "Euro",
+    "languages": [
+      "Italian",
+      "Latin"
+    ],
+    "continent": "Europe",
+    "population": 0
+  },
+  {
+    "iso2": "ve",
+    "name": "Venezuela",
+    "callingCode": "+58",
+    "capitals": [
+      "Caracas"
+    ],
+    "currency": "Venezuelan bolívar soberano",
+    "languages": [
+      "Spanish"
+    ],
+    "continent": "Americas",
+    "population": 0
+  },
+  {
+    "iso2": "vn",
+    "name": "Vietnam",
+    "callingCode": "+84",
+    "capitals": [
+      "Hanoi"
+    ],
+    "currency": "Vietnamese đồng",
+    "languages": [
+      "Vietnamese"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "eh",
+    "name": "Western Sahara",
+    "callingCode": "+2125288",
+    "capitals": [
+      "El Aaiun"
+    ],
+    "currency": "Algerian dinar",
+    "languages": [
+      "Berber",
+      "Hassaniya",
+      "Spanish"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "ye",
+    "name": "Yemen",
+    "callingCode": "+967",
+    "capitals": [
+      "Sana'a"
+    ],
+    "currency": "Yemeni rial",
+    "languages": [
+      "Arabic"
+    ],
+    "continent": "Asia",
+    "population": 0
+  },
+  {
+    "iso2": "zm",
+    "name": "Zambia",
+    "callingCode": "+260",
+    "capitals": [
+      "Lusaka"
+    ],
+    "currency": "Zambian kwacha",
+    "languages": [
+      "English"
+    ],
+    "continent": "Africa",
+    "population": 0
+  },
+  {
+    "iso2": "zw",
+    "name": "Zimbabwe",
+    "callingCode": "+263",
+    "capitals": [
+      "Harare"
+    ],
+    "currency": "Botswana pula",
+    "languages": [
+      "Chibarwe",
+      "English",
+      "Kalanga",
+      "Khoisan",
+      "Ndau",
+      "Northern Ndebele",
+      "Chewa",
+      "Shona",
+      "Sotho",
+      "Tonga",
+      "Tswana",
+      "Tsonga",
+      "Venda",
+      "Xhosa",
+      "Zimbabwean Sign Language"
+    ],
+    "continent": "Africa",
+    "population": 0
+  }
+]

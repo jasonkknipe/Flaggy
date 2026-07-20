@@ -1,0 +1,114 @@
+[
+  {
+    "iso2": "au",
+    "name": "Australia",
+    "callingCode": "+61",
+    "capitals": ["Canberra"],
+    "currency": "Australian Dollar",
+    "languages": ["English"],
+    "continent": "Oceania",
+    "population": 26700000
+  },
+  {
+    "iso2": "us",
+    "name": "United States",
+    "callingCode": "+1",
+    "capitals": ["Washington, D.C."],
+    "currency": "United States Dollar",
+    "languages": ["English"],
+    "continent": "Americas",
+    "population": 335000000
+  },
+  {
+    "iso2": "gb",
+    "name": "United Kingdom",
+    "callingCode": "+44",
+    "capitals": ["London"],
+    "currency": "Pound Sterling",
+    "languages": ["English"],
+    "continent": "Europe",
+    "population": 68000000
+  },
+  {
+    "iso2": "fr",
+    "name": "France",
+    "callingCode": "+33",
+    "capitals": ["Paris"],
+    "currency": "Euro",
+    "languages": ["French"],
+    "continent": "Europe",
+    "population": 66000000
+  },
+  {
+    "iso2": "de",
+    "name": "Germany",
+    "callingCode": "+49",
+    "capitals": ["Berlin"],
+    "currency": "Euro",
+    "languages": ["German"],
+    "continent": "Europe",
+    "population": 84000000
+  },
+  {
+    "iso2": "jp",
+    "name": "Japan",
+    "callingCode": "+81",
+    "capitals": ["Tokyo"],
+    "currency": "Japanese Yen",
+    "languages": ["Japanese"],
+    "continent": "Asia",
+    "population": 124000000
+  },
+  {
+    "iso2": "br",
+    "name": "Brazil",
+    "callingCode": "+55",
+    "capitals": ["Brasilia"],
+    "currency": "Brazilian Real",
+    "languages": ["Portuguese"],
+    "continent": "Americas",
+    "population": 216000000
+  },
+  {
+    "iso2": "za",
+    "name": "South Africa",
+    "callingCode": "+27",
+    "capitals": ["Pretoria", "Cape Town", "Bloemfontein"],
+    "currency": "South African Rand",
+    "languages": [
+      "Zulu",
+      "Xhosa",
+      "Afrikaans",
+      "English",
+      "Northern Sotho",
+      "Tswana",
+      "Southern Sotho",
+      "Tsonga",
+      "Swazi",
+      "Venda",
+      "Ndebele"
+    ],
+    "continent": "Africa",
+    "population": 60000000
+  },
+  {
+    "iso2": "in",
+    "name": "India",
+    "callingCode": "+91",
+    "capitals": ["New Delhi"],
+    "currency": "Indian Rupee",
+    "languages": ["Hindi", "English"],
+    "continent": "Asia",
+    "population": 1428000000
+  },
+  {
+    "iso2": "nz",
+    "name": "New Zealand",
+    "callingCode": "+64",
+    "capitals": ["Wellington"],
+    "currency": "New Zealand Dollar",
+    "languages": ["English", "Maori", "New Zealand Sign Language"],
+    "continent": "Oceania",
+    "population": 5200000
+  }
+]

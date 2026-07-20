@@ -1,0 +1,176 @@
+import { useEffect, useMemo, useState } from 'react'
+import type { Country } from '../types/country'
+import type { GuessField, SessionState } from '../types/quiz'
+import { buildGameSteps } from '../engine/gameSteps'
+import { currentCountryIso2, isSessionComplete, submitAnswer } from '../engine/sessionEngine'
+import { validateGuess } from '../engine/answerValidation'
+import GlassBar from '../components/GlassBar'
+import FlagDisplay from '../components/FlagDisplay'
+import ScoreboardBar from '../components/ScoreboardBar'
+import AutocompleteInput from '../components/AutocompleteInput'
+import CallingCodeInput from '../components/CallingCodeInput'
+import RevealPanel from '../components/RevealPanel'
+import PillButton from '../components/PillButton'
+
+interface GameScreenProps {
+  session: SessionState
+  byIso2: Map<string, Country>
+  allIso2: string[]
+  allNames: string[]
+  allCapitals: string[]
+  onSessionChange: (updated: SessionState) => void
+  onSessionEnd: (finalState: SessionState) => void
+  recordQuestion: (record: SessionState['history'][number]) => void
+}
+
+const FIELD_LABEL: Record<GuessField, string> = {
+  country: 'Which country is this?',
+  callingCode: "This country's calling code?",
+  capital: "This country's capital?",
+}
+
+export default function GameScreen({
+  session,
+  byIso2,
+  allIso2,
+  allNames,
+  allCapitals,
+  onSessionChange,
+  onSessionEnd,
+  recordQuestion,
+}: GameScreenProps) {
+  const steps = useMemo(
+    () => buildGameSteps(session.config.mode, session.config.fieldPlan),
+    [session.config.mode, session.config.fieldPlan],
+  )
+  const [stepIndex, setStepIndex] = useState(0)
+  const [guesses, setGuesses] = useState<Partial<Record<GuessField, string>>>({})
+  const [fieldResults, setFieldResults] = useState<Partial<Record<GuessField, boolean>>>({})
+
+  const currentIso2 = currentCountryIso2(session)
+  const currentCountry = currentIso2 ? byIso2.get(currentIso2) : undefined
+
+  const step = currentCountry ? steps[stepIndex] : undefined
+  const isFixedLength = session.config.mode !== 'learning'
+  const totalQuestions = isFixedLength ? session.queue.length : undefined
+
+  function finishQuestion(finalGuesses: Partial<Record<GuessField, string>>) {
+    if (!currentCountry) return
+    const updated = submitAnswer({ state: session, country: currentCountry, guesses: finalGuesses, allIso2 })
+    recordQuestion(updated.history[updated.history.length - 1])
+    onSessionChange(updated)
+    setStepIndex(0)
+    setGuesses({})
+    setFieldResults({})
+    if (isSessionComplete(updated)) {
+      onSessionEnd(updated)
+    }
+  }
+
+  function handleAskSubmit(field: GuessField, value: string) {
+    if (!currentCountry) return
+    const correct = validateGuess(field, value, currentCountry)
+    const nextGuesses = { ...guesses, [field]: value }
+    const nextResults = { ...fieldResults, [field]: correct }
+    setGuesses(nextGuesses)
+    setFieldResults(nextResults)
+
+    const isLastStep = stepIndex === steps.length - 1
+    if (isLastStep) {
+      finishQuestion(nextGuesses)
+    } else {
+      setStepIndex(stepIndex + 1)
+    }
+  }
+
+  function handleRevealNext() {
+    const isLastStep = stepIndex === steps.length - 1
+    if (isLastStep) {
+      finishQuestion(guesses)
+    } else {
+      setStepIndex(stepIndex + 1)
+    }
+  }
+
+  function handleExit() {
+    onSessionEnd(session)
+  }
+
+  // Enter also advances past a reveal step, in addition to clicking Next.
+  // Scoped to reveal steps only — during an ask step, Enter is already
+  // handled by the focused input itself (submit / select a suggestion), so
+  // this deliberately does nothing there to avoid double-handling it.
+  // Re-subscribes on every render (cheap) rather than trying to track a
+  // dependency array, so it always closes over the current step/guesses.
+  useEffect(() => {
+    function handleKeyDown(event: KeyboardEvent) {
+      if (step?.kind === 'reveal' && event.key === 'Enter') {
+        event.preventDefault()
+        handleRevealNext()
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  })
+
+  if (!currentCountry || !step) {
+    // Shouldn't normally render — App transitions away as soon as the
+    // session completes — but guards against a data/session mismatch.
+    return null
+  }
+
+  return (
+    <div className="flex min-h-dvh flex-col">
+      <GlassBar>
+        <div className="flex items-center justify-between px-4 py-2">
+          <button
+            onClick={handleExit}
+            className="font-sans text-sm font-medium text-ink-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+          >
+            Exit round
+          </button>
+          <span className="font-sans text-sm font-medium text-ink-muted tabular-nums">
+            {totalQuestions !== undefined
+              ? `Question ${session.currentIndex + 1} / ${totalQuestions}`
+              : `Question ${session.currentIndex + 1}`}
+          </span>
+        </div>
+        <ScoreboardBar session={session} />
+      </GlassBar>
+
+      <div className="flex flex-1 flex-col items-center gap-3 overflow-y-auto px-6 py-4">
+        <FlagDisplay country={currentCountry} />
+
+        {step.kind === 'ask' && (
+          <div className="flex w-full flex-col items-center gap-2">
+            <p className="font-sans text-base font-medium text-ink">{FIELD_LABEL[step.field]}</p>
+            {step.field === 'callingCode' ? (
+              <CallingCodeInput autoFocus onSubmit={(value) => handleAskSubmit('callingCode', value)} />
+            ) : (
+              <AutocompleteInput
+                label={step.field === 'country' ? 'Country' : 'Capital'}
+                options={step.field === 'country' ? allNames : allCapitals}
+                autoFocus
+                onSubmit={(value) => handleAskSubmit(step.field, value)}
+              />
+            )}
+            <PillButton variant="ghost" onClick={() => handleAskSubmit(step.field, '')}>
+              Not sure — skip
+            </PillButton>
+          </div>
+        )}
+
+        {step.kind === 'reveal' && (
+          <RevealPanel
+            country={currentCountry}
+            gradeFields={step.gradeFields}
+            guesses={guesses}
+            fieldResults={fieldResults}
+            showInfoCard={step.showInfoCard}
+            onNext={handleRevealNext}
+          />
+        )}
+      </div>
+    </div>
+  )
+}

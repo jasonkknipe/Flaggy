@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/*
+ * Tailwind v4 reads custom properties declared here as design tokens (no
+ * tailwind.config.js needed). Each --color-* below becomes a utility, e.g.
+ * --color-surface-app -> bg-surface-app / text-surface-app / border-surface-app.
+ *
+ * Dark mode is automatic-only, following the OS (no in-app override): the
+ * @media block further down redefines the same custom properties, so a
+ * component written once as `bg-surface-card text-ink` adapts on its own —
+ * no `dark:` variants scattered through the app.
+ */
+@theme {
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --color-surface-app: #f2f2f7;
+  --color-surface-card: #ffffff;
+  --color-surface-glass: rgb(255 255 255 / 0.72);
+  --color-ink: #1c1c1e;
+  --color-ink-muted: #6b6b70;
+  --color-brand: #3049cb;
+  --color-success: #1f9254;
+  --color-danger: #d92d3f;
+  --color-border: rgb(60 60 67 / 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-surface-app: #000000;
+    --color-surface-card: #1c1c1e;
+    --color-surface-glass: rgb(28 28 30 / 0.6);
+    --color-ink: #f2f2f7;
+    --color-ink-muted: #9b9ba1;
+    --color-brand: #5b72e5;
+    --color-success: #34c77b;
+    --color-danger: #ff6b6b;
+    --color-border: rgb(255 255 255 / 0.12);
+  }
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-surface-app);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}

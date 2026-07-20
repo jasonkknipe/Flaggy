@@ -1,0 +1,29 @@
+{
+  "name": "flag-trainer",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "generate-data": "node scripts/generate-data.mjs",
+    "postinstall": "node scripts/copy-flags.mjs"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "framer-motion": "latest",
+    "flag-icons": "latest"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "latest",
+    "@tailwindcss/vite": "latest",
+    "tailwindcss": "latest",
+    "typescript": "^5.6.0",
+    "vite": "latest",
+    "vite-plugin-pwa": "latest"
+  }
+}
