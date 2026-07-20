@@ -168,7 +168,7 @@ export default function GameScreen({
         <FlagDisplay country={currentCountry} compact={isAnswerInputFocused && isKeyboardOpen} />
 
         {step.kind === 'ask' && (
-          <div className="flex w-full flex-col items-center gap-3">
+          <div className="flex w-full flex-col items-center gap-4">
             <p className="font-sans text-base font-medium text-ink">{FIELD_LABEL[step.field]}</p>
             {step.field === 'callingCode' ? (
               <CallingCodeInput

@@ -141,7 +141,7 @@ export default function AutocompleteInput({
           </ul>
         )}
       </div>
-      <PillButton onClick={submit} className="mt-3 w-full" disabled={!suggestions.length}>
+      <PillButton onClick={submit} className="mt-4 w-full" disabled={!suggestions.length}>
         Check answer
       </PillButton>
     </div>

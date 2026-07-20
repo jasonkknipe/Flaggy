@@ -97,8 +97,8 @@ export default function ModeOptionsScreen({
         <p className="font-sans text-sm text-ink-muted">Every country, once - {totalCountries} in total.</p>
       )}
 
-      <ToggleRow label="Country calling codes" value={callingCodeGuessing} onChange={setCallingCodeGuessing} />
       <ToggleRow label="Capital cities" value={capitalGuessing} onChange={setCapitalGuessing} />
+      <ToggleRow label="Country calling codes" value={callingCodeGuessing} onChange={setCallingCodeGuessing} />
 
       <div className="flex w-full max-w-sm flex-col gap-3">
         <PillButton onClick={() => onStart(mode === 'compete' ? 'full' : length, callingCodeGuessing, capitalGuessing)}>

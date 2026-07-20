@@ -15,9 +15,9 @@ export type GameStep =
  *   field is asked - a "foothold" after each guess - then a final,
  *   info-only reveal for anything that wasn't guessed (capital/calling code
  *   if their toggle was off for this session).
- * - Compete: every field is asked back-to-back with NO reveal in between,
- *   then everything (every grading + the info card) is revealed together.
- *   That's the confirmed distinction from Guess Mode: committing "blind".
+ * - Compete: every field is graded immediately, then the country information
+ *   is shown after the final answer. It keeps Compete's fixed full-country
+ *   run while making each response actionable straight away.
  */
 export function buildGameSteps(mode: GameMode, fieldPlan: FieldPlan): GameStep[] {
   const askedFields: GuessField[] = [
@@ -33,7 +33,7 @@ export function buildGameSteps(mode: GameMode, fieldPlan: FieldPlan): GameStep[]
     ]
   }
 
-  if (mode === 'guess') {
+  if (mode === 'guess' || mode === 'compete') {
     const steps: GameStep[] = []
     for (const field of askedFields) {
       steps.push({ kind: 'ask', field })
@@ -43,8 +43,4 @@ export function buildGameSteps(mode: GameMode, fieldPlan: FieldPlan): GameStep[]
     return steps
   }
 
-  // compete
-  const steps: GameStep[] = askedFields.map((field) => ({ kind: 'ask', field }))
-  steps.push({ kind: 'reveal', gradeFields: askedFields, showInfoCard: true })
-  return steps
 }

@@ -53,7 +53,7 @@ export default function CallingCodeInput({ onSubmit, autoFocus, onFocus, onBlur 
           className="w-full bg-transparent font-sans text-lg tabular-nums text-ink outline-none"
         />
       </div>
-      <PillButton onClick={submit} className="mt-3 w-full" disabled={!digits}>
+      <PillButton onClick={submit} className="mt-4 w-full" disabled={!digits}>
         Check answer
       </PillButton>
     </div>
